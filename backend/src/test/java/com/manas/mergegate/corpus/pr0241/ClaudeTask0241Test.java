@@ -1,0 +1,49 @@
+package com.manas.mergegate.corpus.pr0241;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
+class ClaudeTask0241Test {
+
+    @Test
+    void noFailedAttemptsScoresZero() {
+        assertEquals(0, ClaudeTask0241.compute(0));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {-1, -50, Integer.MIN_VALUE})
+    void negativeAttemptsScoreZero(int attempts) {
+        assertEquals(0, ClaudeTask0241.compute(attempts));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 3})
+    void lowAttemptsScoreTwentyFive(int attempts) {
+        assertEquals(25, ClaudeTask0241.compute(attempts));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {4, 7, 9})
+    void moderateAttemptsScoreSixty(int attempts) {
+        assertEquals(60, ClaudeTask0241.compute(attempts));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {10, 42, Integer.MAX_VALUE})
+    void highAttemptsScoreOneHundred(int attempts) {
+        assertEquals(100, ClaudeTask0241.compute(attempts));
+    }
+
+    @Test
+    void boundariesSeparateAdjacentBands() {
+        assertEquals(0, ClaudeTask0241.compute(0));
+        assertEquals(25, ClaudeTask0241.compute(1));
+        assertEquals(25, ClaudeTask0241.compute(3));
+        assertEquals(60, ClaudeTask0241.compute(4));
+        assertEquals(60, ClaudeTask0241.compute(9));
+        assertEquals(100, ClaudeTask0241.compute(10));
+    }
+}

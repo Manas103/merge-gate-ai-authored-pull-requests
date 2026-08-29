@@ -1,0 +1,32 @@
+# Production wiring: a real PostgreSQL instance. This build's measured
+# numbers never load this file; running the app or the test suite here
+# uses src/test/resources/application.yml (an in-memory H2 database in
+# PostgreSQL-compatibility mode), because Docker Desktop's daemon was not
+# running in the environment this project was built in (`docker ps` fails).
+# See the README's "Honest framing" section. docker-compose.yml documents
+# how to stand up a real PostgreSQL instance for this profile.
+spring:
+  application:
+    name: merge-gate
+  datasource:
+    url: jdbc:postgresql://localhost:5432/merge_gate
+    username: mergegate_app
+    password: ${MERGEGATE_DB_PASSWORD:}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+  web:
+    cors:
+      allowed-origins: "http://localhost:5173"
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.manas.mergegate: INFO

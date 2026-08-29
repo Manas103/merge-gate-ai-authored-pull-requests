@@ -1,0 +1,120 @@
+```java
+package com.manas.mergegate.corpus.pr0238;
+
+public final class ClaudeTask0238 {
+
+    private ClaudeTask0238() {
+    }
+
+    public static int compute(int value) {
+        if (value < 10) {
+            return 1;
+        } else if (value < 50) {
+            return 5;
+        } else if (value < 200) {
+            return 8;
+        } else {
+            return 10;
+        }
+    }
+}
+```
+
+```java
+package com.manas.mergegate.corpus.pr0238;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+@DisplayName("ClaudeTask0238.compute")
+class ClaudeTask0238Test {
+
+    @Nested
+    @DisplayName("idle queue")
+    class IdleQueue {
+
+        @ParameterizedTest
+        @ValueSource(ints = {0, 1, 4, 9})
+        @DisplayName("returns lowest priority below depth 10")
+        void returnsLowestPriority(int queueDepth) {
+            assertEquals(1, ClaudeTask0238.compute(queueDepth));
+        }
+
+        @Test
+        @DisplayName("treats negative depth as idle")
+        void treatsNegativeDepthAsIdle() {
+            assertEquals(1, ClaudeTask0238.compute(-1));
+            assertEquals(1, ClaudeTask0238.compute(Integer.MIN_VALUE));
+        }
+    }
+
+    @Nested
+    @DisplayName("moderate queue")
+    class ModerateQueue {
+
+        @ParameterizedTest
+        @ValueSource(ints = {10, 25, 49})
+        @DisplayName("returns mid priority between 10 and 49")
+        void returnsMidPriority(int queueDepth) {
+            assertEquals(5, ClaudeTask0238.compute(queueDepth));
+        }
+    }
+
+    @Nested
+    @DisplayName("busy queue")
+    class BusyQueue {
+
+        @ParameterizedTest
+        @ValueSource(ints = {50, 120, 199})
+        @DisplayName("returns high priority between 50 and 199")
+        void returnsHighPriority(int queueDepth) {
+            assertEquals(8, ClaudeTask0238.compute(queueDepth));
+        }
+    }
+
+    @Nested
+    @DisplayName("saturated queue")
+    class SaturatedQueue {
+
+        @ParameterizedTest
+        @ValueSource(ints = {200, 1000, Integer.MAX_VALUE})
+        @DisplayName("returns maximum priority from depth 200")
+        void returnsMaximumPriority(int queueDepth) {
+            assertEquals(10, ClaudeTask0238.compute(queueDepth));
+        }
+    }
+
+    @ParameterizedTest(name = "queueDepth {0} maps to priority {1}")
+    @CsvSource({
+        "9, 1",
+        "10, 5",
+        "49, 5",
+        "50, 8",
+        "199, 8",
+        "200, 10"
+    })
+    @DisplayName("maps each branch boundary to the expected priority")
+    void mapsBoundaries(int queueDepth, int expected) {
+        assertEquals(expected, ClaudeTask0238.compute(queueDepth));
+    }
+
+    @Test
+    @DisplayName("is monotonically non decreasing across the boundaries")
+    void isMonotonicallyNonDecreasing() {
+        int previous = ClaudeTask0238.compute(Integer.MIN_VALUE);
+        for (int queueDepth : new int[] {0, 9, 10, 49, 50, 199, 200, Integer.MAX_VALUE}) {
+            int current = ClaudeTask0238.compute(queueDepth);
+            org.junit.jupiter.api.Assertions.assertTrue(
+                current >= previous,
+                "priority dropped at queueDepth " + queueDepth);
+            previous = current;
+        }
+    }
+}
+```

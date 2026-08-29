@@ -1,0 +1,1717 @@
+[
+  {
+    "prId": "pr0001",
+    "className": "LateFee0001",
+    "packageName": "com.manas.mergegate.corpus.pr0001",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0002",
+    "className": "GradeBand0002",
+    "packageName": "com.manas.mergegate.corpus.pr0002",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0003",
+    "className": "TempZone0003",
+    "packageName": "com.manas.mergegate.corpus.pr0003",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0004",
+    "className": "AgeMultiplier0004",
+    "packageName": "com.manas.mergegate.corpus.pr0004",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0005",
+    "className": "DiscountTier0005",
+    "packageName": "com.manas.mergegate.corpus.pr0005",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0006",
+    "className": "PasswordScore0006",
+    "packageName": "com.manas.mergegate.corpus.pr0006",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0007",
+    "className": "RetryBackoff0007",
+    "packageName": "com.manas.mergegate.corpus.pr0007",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0008",
+    "className": "BmiZone0008",
+    "packageName": "com.manas.mergegate.corpus.pr0008",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0009",
+    "className": "TaxBracket0009",
+    "packageName": "com.manas.mergegate.corpus.pr0009",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0010",
+    "className": "QueuePriority0010",
+    "packageName": "com.manas.mergegate.corpus.pr0010",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0011",
+    "className": "InventoryReorder0011",
+    "packageName": "com.manas.mergegate.corpus.pr0011",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0012",
+    "className": "LatencyBudget0012",
+    "packageName": "com.manas.mergegate.corpus.pr0012",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0013",
+    "className": "BatterySaver0013",
+    "packageName": "com.manas.mergegate.corpus.pr0013",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0014",
+    "className": "ErrorSeverity0014",
+    "packageName": "com.manas.mergegate.corpus.pr0014",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0015",
+    "className": "ShiftPay0015",
+    "packageName": "com.manas.mergegate.corpus.pr0015",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0016",
+    "className": "CreditRisk0016",
+    "packageName": "com.manas.mergegate.corpus.pr0016",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0017",
+    "className": "TrafficLight0017",
+    "packageName": "com.manas.mergegate.corpus.pr0017",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0018",
+    "className": "ShippingFee0018",
+    "packageName": "com.manas.mergegate.corpus.pr0018",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0019",
+    "className": "LateFee0019",
+    "packageName": "com.manas.mergegate.corpus.pr0019",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0020",
+    "className": "GradeBand0020",
+    "packageName": "com.manas.mergegate.corpus.pr0020",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0021",
+    "className": "TempZone0021",
+    "packageName": "com.manas.mergegate.corpus.pr0021",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0022",
+    "className": "AgeMultiplier0022",
+    "packageName": "com.manas.mergegate.corpus.pr0022",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0023",
+    "className": "DiscountTier0023",
+    "packageName": "com.manas.mergegate.corpus.pr0023",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0024",
+    "className": "PasswordScore0024",
+    "packageName": "com.manas.mergegate.corpus.pr0024",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0025",
+    "className": "RetryBackoff0025",
+    "packageName": "com.manas.mergegate.corpus.pr0025",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0026",
+    "className": "BmiZone0026",
+    "packageName": "com.manas.mergegate.corpus.pr0026",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0027",
+    "className": "TaxBracket0027",
+    "packageName": "com.manas.mergegate.corpus.pr0027",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0028",
+    "className": "QueuePriority0028",
+    "packageName": "com.manas.mergegate.corpus.pr0028",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0029",
+    "className": "InventoryReorder0029",
+    "packageName": "com.manas.mergegate.corpus.pr0029",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0030",
+    "className": "LatencyBudget0030",
+    "packageName": "com.manas.mergegate.corpus.pr0030",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0031",
+    "className": "BatterySaver0031",
+    "packageName": "com.manas.mergegate.corpus.pr0031",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0032",
+    "className": "ErrorSeverity0032",
+    "packageName": "com.manas.mergegate.corpus.pr0032",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0033",
+    "className": "ShiftPay0033",
+    "packageName": "com.manas.mergegate.corpus.pr0033",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0034",
+    "className": "CreditRisk0034",
+    "packageName": "com.manas.mergegate.corpus.pr0034",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0035",
+    "className": "TrafficLight0035",
+    "packageName": "com.manas.mergegate.corpus.pr0035",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0036",
+    "className": "ShippingFee0036",
+    "packageName": "com.manas.mergegate.corpus.pr0036",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0037",
+    "className": "LateFee0037",
+    "packageName": "com.manas.mergegate.corpus.pr0037",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0038",
+    "className": "GradeBand0038",
+    "packageName": "com.manas.mergegate.corpus.pr0038",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0039",
+    "className": "TempZone0039",
+    "packageName": "com.manas.mergegate.corpus.pr0039",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0040",
+    "className": "AgeMultiplier0040",
+    "packageName": "com.manas.mergegate.corpus.pr0040",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0041",
+    "className": "DiscountTier0041",
+    "packageName": "com.manas.mergegate.corpus.pr0041",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0042",
+    "className": "PasswordScore0042",
+    "packageName": "com.manas.mergegate.corpus.pr0042",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0043",
+    "className": "RetryBackoff0043",
+    "packageName": "com.manas.mergegate.corpus.pr0043",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0044",
+    "className": "BmiZone0044",
+    "packageName": "com.manas.mergegate.corpus.pr0044",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0045",
+    "className": "TaxBracket0045",
+    "packageName": "com.manas.mergegate.corpus.pr0045",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0046",
+    "className": "QueuePriority0046",
+    "packageName": "com.manas.mergegate.corpus.pr0046",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0047",
+    "className": "InventoryReorder0047",
+    "packageName": "com.manas.mergegate.corpus.pr0047",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0048",
+    "className": "LatencyBudget0048",
+    "packageName": "com.manas.mergegate.corpus.pr0048",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0049",
+    "className": "BatterySaver0049",
+    "packageName": "com.manas.mergegate.corpus.pr0049",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0050",
+    "className": "ErrorSeverity0050",
+    "packageName": "com.manas.mergegate.corpus.pr0050",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0051",
+    "className": "ShiftPay0051",
+    "packageName": "com.manas.mergegate.corpus.pr0051",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0052",
+    "className": "CreditRisk0052",
+    "packageName": "com.manas.mergegate.corpus.pr0052",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0053",
+    "className": "TrafficLight0053",
+    "packageName": "com.manas.mergegate.corpus.pr0053",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0054",
+    "className": "ShippingFee0054",
+    "packageName": "com.manas.mergegate.corpus.pr0054",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0055",
+    "className": "LateFee0055",
+    "packageName": "com.manas.mergegate.corpus.pr0055",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0056",
+    "className": "GradeBand0056",
+    "packageName": "com.manas.mergegate.corpus.pr0056",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0057",
+    "className": "TempZone0057",
+    "packageName": "com.manas.mergegate.corpus.pr0057",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0058",
+    "className": "AgeMultiplier0058",
+    "packageName": "com.manas.mergegate.corpus.pr0058",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0059",
+    "className": "DiscountTier0059",
+    "packageName": "com.manas.mergegate.corpus.pr0059",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0060",
+    "className": "PasswordScore0060",
+    "packageName": "com.manas.mergegate.corpus.pr0060",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0061",
+    "className": "RetryBackoff0061",
+    "packageName": "com.manas.mergegate.corpus.pr0061",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0062",
+    "className": "BmiZone0062",
+    "packageName": "com.manas.mergegate.corpus.pr0062",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0063",
+    "className": "TaxBracket0063",
+    "packageName": "com.manas.mergegate.corpus.pr0063",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0064",
+    "className": "QueuePriority0064",
+    "packageName": "com.manas.mergegate.corpus.pr0064",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0065",
+    "className": "InventoryReorder0065",
+    "packageName": "com.manas.mergegate.corpus.pr0065",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0066",
+    "className": "LatencyBudget0066",
+    "packageName": "com.manas.mergegate.corpus.pr0066",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0067",
+    "className": "BatterySaver0067",
+    "packageName": "com.manas.mergegate.corpus.pr0067",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0068",
+    "className": "ErrorSeverity0068",
+    "packageName": "com.manas.mergegate.corpus.pr0068",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0069",
+    "className": "ShiftPay0069",
+    "packageName": "com.manas.mergegate.corpus.pr0069",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0070",
+    "className": "CreditRisk0070",
+    "packageName": "com.manas.mergegate.corpus.pr0070",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0071",
+    "className": "TrafficLight0071",
+    "packageName": "com.manas.mergegate.corpus.pr0071",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0072",
+    "className": "ShippingFee0072",
+    "packageName": "com.manas.mergegate.corpus.pr0072",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0073",
+    "className": "LateFee0073",
+    "packageName": "com.manas.mergegate.corpus.pr0073",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0074",
+    "className": "GradeBand0074",
+    "packageName": "com.manas.mergegate.corpus.pr0074",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0075",
+    "className": "TempZone0075",
+    "packageName": "com.manas.mergegate.corpus.pr0075",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0076",
+    "className": "AgeMultiplier0076",
+    "packageName": "com.manas.mergegate.corpus.pr0076",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0077",
+    "className": "DiscountTier0077",
+    "packageName": "com.manas.mergegate.corpus.pr0077",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0078",
+    "className": "PasswordScore0078",
+    "packageName": "com.manas.mergegate.corpus.pr0078",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0079",
+    "className": "RetryBackoff0079",
+    "packageName": "com.manas.mergegate.corpus.pr0079",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0080",
+    "className": "BmiZone0080",
+    "packageName": "com.manas.mergegate.corpus.pr0080",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0081",
+    "className": "TaxBracket0081",
+    "packageName": "com.manas.mergegate.corpus.pr0081",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0082",
+    "className": "QueuePriority0082",
+    "packageName": "com.manas.mergegate.corpus.pr0082",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0083",
+    "className": "InventoryReorder0083",
+    "packageName": "com.manas.mergegate.corpus.pr0083",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0084",
+    "className": "LatencyBudget0084",
+    "packageName": "com.manas.mergegate.corpus.pr0084",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0085",
+    "className": "BatterySaver0085",
+    "packageName": "com.manas.mergegate.corpus.pr0085",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0086",
+    "className": "ErrorSeverity0086",
+    "packageName": "com.manas.mergegate.corpus.pr0086",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0087",
+    "className": "ShiftPay0087",
+    "packageName": "com.manas.mergegate.corpus.pr0087",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0088",
+    "className": "CreditRisk0088",
+    "packageName": "com.manas.mergegate.corpus.pr0088",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0089",
+    "className": "TrafficLight0089",
+    "packageName": "com.manas.mergegate.corpus.pr0089",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0090",
+    "className": "ShippingFee0090",
+    "packageName": "com.manas.mergegate.corpus.pr0090",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0091",
+    "className": "LateFee0091",
+    "packageName": "com.manas.mergegate.corpus.pr0091",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0092",
+    "className": "GradeBand0092",
+    "packageName": "com.manas.mergegate.corpus.pr0092",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0093",
+    "className": "TempZone0093",
+    "packageName": "com.manas.mergegate.corpus.pr0093",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0094",
+    "className": "AgeMultiplier0094",
+    "packageName": "com.manas.mergegate.corpus.pr0094",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0095",
+    "className": "DiscountTier0095",
+    "packageName": "com.manas.mergegate.corpus.pr0095",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0096",
+    "className": "PasswordScore0096",
+    "packageName": "com.manas.mergegate.corpus.pr0096",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0097",
+    "className": "RetryBackoff0097",
+    "packageName": "com.manas.mergegate.corpus.pr0097",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0098",
+    "className": "BmiZone0098",
+    "packageName": "com.manas.mergegate.corpus.pr0098",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0099",
+    "className": "TaxBracket0099",
+    "packageName": "com.manas.mergegate.corpus.pr0099",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0100",
+    "className": "QueuePriority0100",
+    "packageName": "com.manas.mergegate.corpus.pr0100",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0101",
+    "className": "InventoryReorder0101",
+    "packageName": "com.manas.mergegate.corpus.pr0101",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0102",
+    "className": "LatencyBudget0102",
+    "packageName": "com.manas.mergegate.corpus.pr0102",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0103",
+    "className": "BatterySaver0103",
+    "packageName": "com.manas.mergegate.corpus.pr0103",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0104",
+    "className": "ErrorSeverity0104",
+    "packageName": "com.manas.mergegate.corpus.pr0104",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0105",
+    "className": "ShiftPay0105",
+    "packageName": "com.manas.mergegate.corpus.pr0105",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0106",
+    "className": "CreditRisk0106",
+    "packageName": "com.manas.mergegate.corpus.pr0106",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0107",
+    "className": "TrafficLight0107",
+    "packageName": "com.manas.mergegate.corpus.pr0107",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0108",
+    "className": "ShippingFee0108",
+    "packageName": "com.manas.mergegate.corpus.pr0108",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0109",
+    "className": "LateFee0109",
+    "packageName": "com.manas.mergegate.corpus.pr0109",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0110",
+    "className": "GradeBand0110",
+    "packageName": "com.manas.mergegate.corpus.pr0110",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0111",
+    "className": "TempZone0111",
+    "packageName": "com.manas.mergegate.corpus.pr0111",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0112",
+    "className": "AgeMultiplier0112",
+    "packageName": "com.manas.mergegate.corpus.pr0112",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0113",
+    "className": "DiscountTier0113",
+    "packageName": "com.manas.mergegate.corpus.pr0113",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0114",
+    "className": "PasswordScore0114",
+    "packageName": "com.manas.mergegate.corpus.pr0114",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0115",
+    "className": "RetryBackoff0115",
+    "packageName": "com.manas.mergegate.corpus.pr0115",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0116",
+    "className": "BmiZone0116",
+    "packageName": "com.manas.mergegate.corpus.pr0116",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0117",
+    "className": "TaxBracket0117",
+    "packageName": "com.manas.mergegate.corpus.pr0117",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0118",
+    "className": "QueuePriority0118",
+    "packageName": "com.manas.mergegate.corpus.pr0118",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0119",
+    "className": "InventoryReorder0119",
+    "packageName": "com.manas.mergegate.corpus.pr0119",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0120",
+    "className": "LatencyBudget0120",
+    "packageName": "com.manas.mergegate.corpus.pr0120",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0121",
+    "className": "BatterySaver0121",
+    "packageName": "com.manas.mergegate.corpus.pr0121",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0122",
+    "className": "ErrorSeverity0122",
+    "packageName": "com.manas.mergegate.corpus.pr0122",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0123",
+    "className": "ShiftPay0123",
+    "packageName": "com.manas.mergegate.corpus.pr0123",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0124",
+    "className": "CreditRisk0124",
+    "packageName": "com.manas.mergegate.corpus.pr0124",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0125",
+    "className": "TrafficLight0125",
+    "packageName": "com.manas.mergegate.corpus.pr0125",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0126",
+    "className": "ShippingFee0126",
+    "packageName": "com.manas.mergegate.corpus.pr0126",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0127",
+    "className": "LateFee0127",
+    "packageName": "com.manas.mergegate.corpus.pr0127",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0128",
+    "className": "GradeBand0128",
+    "packageName": "com.manas.mergegate.corpus.pr0128",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0129",
+    "className": "TempZone0129",
+    "packageName": "com.manas.mergegate.corpus.pr0129",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0130",
+    "className": "AgeMultiplier0130",
+    "packageName": "com.manas.mergegate.corpus.pr0130",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0131",
+    "className": "DiscountTier0131",
+    "packageName": "com.manas.mergegate.corpus.pr0131",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0132",
+    "className": "PasswordScore0132",
+    "packageName": "com.manas.mergegate.corpus.pr0132",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0133",
+    "className": "RetryBackoff0133",
+    "packageName": "com.manas.mergegate.corpus.pr0133",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0134",
+    "className": "BmiZone0134",
+    "packageName": "com.manas.mergegate.corpus.pr0134",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0135",
+    "className": "TaxBracket0135",
+    "packageName": "com.manas.mergegate.corpus.pr0135",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0136",
+    "className": "QueuePriority0136",
+    "packageName": "com.manas.mergegate.corpus.pr0136",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0137",
+    "className": "InventoryReorder0137",
+    "packageName": "com.manas.mergegate.corpus.pr0137",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0138",
+    "className": "LatencyBudget0138",
+    "packageName": "com.manas.mergegate.corpus.pr0138",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0139",
+    "className": "BatterySaver0139",
+    "packageName": "com.manas.mergegate.corpus.pr0139",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0140",
+    "className": "ErrorSeverity0140",
+    "packageName": "com.manas.mergegate.corpus.pr0140",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0141",
+    "className": "ShiftPay0141",
+    "packageName": "com.manas.mergegate.corpus.pr0141",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0142",
+    "className": "CreditRisk0142",
+    "packageName": "com.manas.mergegate.corpus.pr0142",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0143",
+    "className": "TrafficLight0143",
+    "packageName": "com.manas.mergegate.corpus.pr0143",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0144",
+    "className": "ShippingFee0144",
+    "packageName": "com.manas.mergegate.corpus.pr0144",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0145",
+    "className": "LateFee0145",
+    "packageName": "com.manas.mergegate.corpus.pr0145",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0146",
+    "className": "GradeBand0146",
+    "packageName": "com.manas.mergegate.corpus.pr0146",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0147",
+    "className": "TempZone0147",
+    "packageName": "com.manas.mergegate.corpus.pr0147",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0148",
+    "className": "AgeMultiplier0148",
+    "packageName": "com.manas.mergegate.corpus.pr0148",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0149",
+    "className": "DiscountTier0149",
+    "packageName": "com.manas.mergegate.corpus.pr0149",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0150",
+    "className": "PasswordScore0150",
+    "packageName": "com.manas.mergegate.corpus.pr0150",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0151",
+    "className": "RetryBackoff0151",
+    "packageName": "com.manas.mergegate.corpus.pr0151",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0152",
+    "className": "BmiZone0152",
+    "packageName": "com.manas.mergegate.corpus.pr0152",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0153",
+    "className": "TaxBracket0153",
+    "packageName": "com.manas.mergegate.corpus.pr0153",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0154",
+    "className": "QueuePriority0154",
+    "packageName": "com.manas.mergegate.corpus.pr0154",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0155",
+    "className": "InventoryReorder0155",
+    "packageName": "com.manas.mergegate.corpus.pr0155",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0156",
+    "className": "LatencyBudget0156",
+    "packageName": "com.manas.mergegate.corpus.pr0156",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0157",
+    "className": "BatterySaver0157",
+    "packageName": "com.manas.mergegate.corpus.pr0157",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0158",
+    "className": "ErrorSeverity0158",
+    "packageName": "com.manas.mergegate.corpus.pr0158",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0159",
+    "className": "ShiftPay0159",
+    "packageName": "com.manas.mergegate.corpus.pr0159",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0160",
+    "className": "CreditRisk0160",
+    "packageName": "com.manas.mergegate.corpus.pr0160",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0161",
+    "className": "TrafficLight0161",
+    "packageName": "com.manas.mergegate.corpus.pr0161",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0162",
+    "className": "ShippingFee0162",
+    "packageName": "com.manas.mergegate.corpus.pr0162",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0163",
+    "className": "LateFee0163",
+    "packageName": "com.manas.mergegate.corpus.pr0163",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0164",
+    "className": "GradeBand0164",
+    "packageName": "com.manas.mergegate.corpus.pr0164",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0165",
+    "className": "TempZone0165",
+    "packageName": "com.manas.mergegate.corpus.pr0165",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0166",
+    "className": "AgeMultiplier0166",
+    "packageName": "com.manas.mergegate.corpus.pr0166",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0167",
+    "className": "DiscountTier0167",
+    "packageName": "com.manas.mergegate.corpus.pr0167",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0168",
+    "className": "PasswordScore0168",
+    "packageName": "com.manas.mergegate.corpus.pr0168",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0169",
+    "className": "RetryBackoff0169",
+    "packageName": "com.manas.mergegate.corpus.pr0169",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0170",
+    "className": "BmiZone0170",
+    "packageName": "com.manas.mergegate.corpus.pr0170",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0171",
+    "className": "TaxBracket0171",
+    "packageName": "com.manas.mergegate.corpus.pr0171",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0172",
+    "className": "QueuePriority0172",
+    "packageName": "com.manas.mergegate.corpus.pr0172",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0173",
+    "className": "InventoryReorder0173",
+    "packageName": "com.manas.mergegate.corpus.pr0173",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0174",
+    "className": "LatencyBudget0174",
+    "packageName": "com.manas.mergegate.corpus.pr0174",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0175",
+    "className": "BatterySaver0175",
+    "packageName": "com.manas.mergegate.corpus.pr0175",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0176",
+    "className": "ErrorSeverity0176",
+    "packageName": "com.manas.mergegate.corpus.pr0176",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0177",
+    "className": "ShiftPay0177",
+    "packageName": "com.manas.mergegate.corpus.pr0177",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0178",
+    "className": "CreditRisk0178",
+    "packageName": "com.manas.mergegate.corpus.pr0178",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0179",
+    "className": "TrafficLight0179",
+    "packageName": "com.manas.mergegate.corpus.pr0179",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0180",
+    "className": "ShippingFee0180",
+    "packageName": "com.manas.mergegate.corpus.pr0180",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0181",
+    "className": "LateFee0181",
+    "packageName": "com.manas.mergegate.corpus.pr0181",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0182",
+    "className": "GradeBand0182",
+    "packageName": "com.manas.mergegate.corpus.pr0182",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0183",
+    "className": "TempZone0183",
+    "packageName": "com.manas.mergegate.corpus.pr0183",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0184",
+    "className": "AgeMultiplier0184",
+    "packageName": "com.manas.mergegate.corpus.pr0184",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0185",
+    "className": "DiscountTier0185",
+    "packageName": "com.manas.mergegate.corpus.pr0185",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0186",
+    "className": "PasswordScore0186",
+    "packageName": "com.manas.mergegate.corpus.pr0186",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0187",
+    "className": "RetryBackoff0187",
+    "packageName": "com.manas.mergegate.corpus.pr0187",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0188",
+    "className": "BmiZone0188",
+    "packageName": "com.manas.mergegate.corpus.pr0188",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0189",
+    "className": "TaxBracket0189",
+    "packageName": "com.manas.mergegate.corpus.pr0189",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0190",
+    "className": "QueuePriority0190",
+    "packageName": "com.manas.mergegate.corpus.pr0190",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0191",
+    "className": "InventoryReorder0191",
+    "packageName": "com.manas.mergegate.corpus.pr0191",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0192",
+    "className": "LatencyBudget0192",
+    "packageName": "com.manas.mergegate.corpus.pr0192",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0193",
+    "className": "BatterySaver0193",
+    "packageName": "com.manas.mergegate.corpus.pr0193",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0194",
+    "className": "ErrorSeverity0194",
+    "packageName": "com.manas.mergegate.corpus.pr0194",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0195",
+    "className": "ShiftPay0195",
+    "packageName": "com.manas.mergegate.corpus.pr0195",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0196",
+    "className": "CreditRisk0196",
+    "packageName": "com.manas.mergegate.corpus.pr0196",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0197",
+    "className": "TrafficLight0197",
+    "packageName": "com.manas.mergegate.corpus.pr0197",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0198",
+    "className": "ShippingFee0198",
+    "packageName": "com.manas.mergegate.corpus.pr0198",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0199",
+    "className": "LateFee0199",
+    "packageName": "com.manas.mergegate.corpus.pr0199",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0200",
+    "className": "GradeBand0200",
+    "packageName": "com.manas.mergegate.corpus.pr0200",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0201",
+    "className": "TempZone0201",
+    "packageName": "com.manas.mergegate.corpus.pr0201",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0202",
+    "className": "AgeMultiplier0202",
+    "packageName": "com.manas.mergegate.corpus.pr0202",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0203",
+    "className": "DiscountTier0203",
+    "packageName": "com.manas.mergegate.corpus.pr0203",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0204",
+    "className": "PasswordScore0204",
+    "packageName": "com.manas.mergegate.corpus.pr0204",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0205",
+    "className": "RetryBackoff0205",
+    "packageName": "com.manas.mergegate.corpus.pr0205",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0206",
+    "className": "BmiZone0206",
+    "packageName": "com.manas.mergegate.corpus.pr0206",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0207",
+    "className": "TaxBracket0207",
+    "packageName": "com.manas.mergegate.corpus.pr0207",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0208",
+    "className": "QueuePriority0208",
+    "packageName": "com.manas.mergegate.corpus.pr0208",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0209",
+    "className": "InventoryReorder0209",
+    "packageName": "com.manas.mergegate.corpus.pr0209",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0210",
+    "className": "LatencyBudget0210",
+    "packageName": "com.manas.mergegate.corpus.pr0210",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0211",
+    "className": "BatterySaver0211",
+    "packageName": "com.manas.mergegate.corpus.pr0211",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0212",
+    "className": "ErrorSeverity0212",
+    "packageName": "com.manas.mergegate.corpus.pr0212",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0213",
+    "className": "ShiftPay0213",
+    "packageName": "com.manas.mergegate.corpus.pr0213",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "shift pay multiplier by hours worked"
+  },
+  {
+    "prId": "pr0214",
+    "className": "CreditRisk0214",
+    "packageName": "com.manas.mergegate.corpus.pr0214",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "credit risk band by score points"
+  },
+  {
+    "prId": "pr0215",
+    "className": "TrafficLight0215",
+    "packageName": "com.manas.mergegate.corpus.pr0215",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "signal timing adjustment by vehicles per minute"
+  },
+  {
+    "prId": "pr0216",
+    "className": "ShippingFee0216",
+    "packageName": "com.manas.mergegate.corpus.pr0216",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "shipping fee tier by parcel weight in kg"
+  },
+  {
+    "prId": "pr0217",
+    "className": "LateFee0217",
+    "packageName": "com.manas.mergegate.corpus.pr0217",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "late fee schedule by days overdue"
+  },
+  {
+    "prId": "pr0218",
+    "className": "GradeBand0218",
+    "packageName": "com.manas.mergegate.corpus.pr0218",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "grade band score adjustment by percent score"
+  },
+  {
+    "prId": "pr0219",
+    "className": "TempZone0219",
+    "packageName": "com.manas.mergegate.corpus.pr0219",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "climate control output by temperature in Celsius"
+  },
+  {
+    "prId": "pr0220",
+    "className": "AgeMultiplier0220",
+    "packageName": "com.manas.mergegate.corpus.pr0220",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "pricing multiplier by age in years"
+  },
+  {
+    "prId": "pr0221",
+    "className": "DiscountTier0221",
+    "packageName": "com.manas.mergegate.corpus.pr0221",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "discount tier by purchase amount in cents"
+  },
+  {
+    "prId": "pr0222",
+    "className": "PasswordScore0222",
+    "packageName": "com.manas.mergegate.corpus.pr0222",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "password strength score by character length"
+  },
+  {
+    "prId": "pr0223",
+    "className": "RetryBackoff0223",
+    "packageName": "com.manas.mergegate.corpus.pr0223",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "retry backoff milliseconds by attempt number"
+  },
+  {
+    "prId": "pr0224",
+    "className": "BmiZone0224",
+    "packageName": "com.manas.mergegate.corpus.pr0224",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "BMI zone adjustment by BMI in tenths"
+  },
+  {
+    "prId": "pr0225",
+    "className": "TaxBracket0225",
+    "packageName": "com.manas.mergegate.corpus.pr0225",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "tax withholding by income in cents"
+  },
+  {
+    "prId": "pr0226",
+    "className": "QueuePriority0226",
+    "packageName": "com.manas.mergegate.corpus.pr0226",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "queue priority score by wait minutes"
+  },
+  {
+    "prId": "pr0227",
+    "className": "InventoryReorder0227",
+    "packageName": "com.manas.mergegate.corpus.pr0227",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "reorder quantity by units left in stock"
+  },
+  {
+    "prId": "pr0228",
+    "className": "LatencyBudget0228",
+    "packageName": "com.manas.mergegate.corpus.pr0228",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "latency budget classification by measured millis"
+  },
+  {
+    "prId": "pr0229",
+    "className": "BatterySaver0229",
+    "packageName": "com.manas.mergegate.corpus.pr0229",
+    "source": "SYNTHETIC_COPILOT",
+    "description": "power plan selection by battery percent"
+  },
+  {
+    "prId": "pr0230",
+    "className": "ErrorSeverity0230",
+    "packageName": "com.manas.mergegate.corpus.pr0230",
+    "source": "SYNTHETIC_CURSOR",
+    "description": "error severity score by numeric error code"
+  },
+  {
+    "prId": "pr0231",
+    "className": "ClaudeTask0231",
+    "packageName": "com.manas.mergegate.corpus.pr0231",
+    "source": "CLAUDE_CODE",
+    "description": "a late fee schedule in cents based on minutesLate"
+  },
+  {
+    "prId": "pr0232",
+    "className": "ClaudeTask0232",
+    "packageName": "com.manas.mergegate.corpus.pr0232",
+    "source": "CLAUDE_CODE",
+    "description": "a shipping insurance premium in cents based on declaredValueHundreds"
+  },
+  {
+    "prId": "pr0233",
+    "className": "ClaudeTask0233",
+    "packageName": "com.manas.mergegate.corpus.pr0233",
+    "source": "CLAUDE_CODE",
+    "description": "a customer loyalty point bonus based on ordersThisYear"
+  },
+  {
+    "prId": "pr0234",
+    "className": "ClaudeTask0234",
+    "packageName": "com.manas.mergegate.corpus.pr0234",
+    "source": "CLAUDE_CODE",
+    "description": "an elevator dispatch priority score based on floorsAway"
+  },
+  {
+    "prId": "pr0235",
+    "className": "ClaudeTask0235",
+    "packageName": "com.manas.mergegate.corpus.pr0235",
+    "source": "CLAUDE_CODE",
+    "description": "a thermostat energy mode score based on occupancySensorsActive"
+  },
+  {
+    "prId": "pr0236",
+    "className": "ClaudeTask0236",
+    "packageName": "com.manas.mergegate.corpus.pr0236",
+    "source": "CLAUDE_CODE",
+    "description": "a warehouse pick-path priority based on aisleNumber"
+  },
+  {
+    "prId": "pr0237",
+    "className": "ClaudeTask0237",
+    "packageName": "com.manas.mergegate.corpus.pr0237",
+    "source": "CLAUDE_CODE",
+    "description": "a support ticket urgency score based on hoursSinceLastReply"
+  },
+  {
+    "prId": "pr0238",
+    "className": "ClaudeTask0238",
+    "packageName": "com.manas.mergegate.corpus.pr0238",
+    "source": "CLAUDE_CODE",
+    "description": "a video transcode priority based on queueDepth"
+  },
+  {
+    "prId": "pr0239",
+    "className": "ClaudeTask0239",
+    "packageName": "com.manas.mergegate.corpus.pr0239",
+    "source": "CLAUDE_CODE",
+    "description": "a coupon stacking discount in cents based on itemCount"
+  },
+  {
+    "prId": "pr0240",
+    "className": "ClaudeTask0240",
+    "packageName": "com.manas.mergegate.corpus.pr0240",
+    "source": "CLAUDE_CODE",
+    "description": "a battery charge rate limit based on temperatureTenthsC"
+  },
+  {
+    "prId": "pr0241",
+    "className": "ClaudeTask0241",
+    "packageName": "com.manas.mergegate.corpus.pr0241",
+    "source": "CLAUDE_CODE",
+    "description": "a fraud review score based on failedLoginAttempts"
+  },
+  {
+    "prId": "pr0242",
+    "className": "ClaudeTask0242",
+    "packageName": "com.manas.mergegate.corpus.pr0242",
+    "source": "CLAUDE_CODE",
+    "description": "a delivery route surcharge in cents based on stopsRemaining"
+  },
+  {
+    "prId": "pr0243",
+    "className": "ClaudeTask0243",
+    "packageName": "com.manas.mergegate.corpus.pr0243",
+    "source": "CLAUDE_CODE",
+    "description": "a parking garage rate in cents based on minutesParked"
+  },
+  {
+    "prId": "pr0244",
+    "className": "ClaudeTask0244",
+    "packageName": "com.manas.mergegate.corpus.pr0244",
+    "source": "CLAUDE_CODE",
+    "description": "a server autoscale target based on requestsPerSecond"
+  },
+  {
+    "prId": "pr0245",
+    "className": "ClaudeTask0245",
+    "packageName": "com.manas.mergegate.corpus.pr0245",
+    "source": "CLAUDE_CODE",
+    "description": "a loan interest rate adjustment in basis points based on creditScorePoints"
+  }
+]

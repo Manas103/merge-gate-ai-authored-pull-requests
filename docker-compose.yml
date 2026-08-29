@@ -1,0 +1,14 @@
+# Documents the real PostgreSQL instance backend/src/main/resources/application.yml (the
+# production profile) targets. Docker Desktop's daemon was not running in the environment
+# this project was built in (`docker ps` fails), so this file is not exercised by anything
+# in this README; every measured number comes from the H2-in-PostgreSQL-compatibility-mode
+# test path instead (backend/src/test/resources/application.yml).
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: merge_gate
+      POSTGRES_USER: mergegate_app
+      POSTGRES_PASSWORD: change-me
+    ports:
+      - "5432:5432"

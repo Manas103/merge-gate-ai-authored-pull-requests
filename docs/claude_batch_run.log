@@ -1,0 +1,216 @@
+[pr0231] PARSE FAILED task=0 blocks=2
+[pr0231] PARSE FAILED task=1 blocks=2
+[pr0231] PARSE FAILED task=2 blocks=2
+[pr0231] PARSE FAILED task=3 blocks=2
+[pr0231] PARSE FAILED task=4 blocks=2
+[pr0231] PARSE FAILED task=5 blocks=2
+[pr0231] PARSE FAILED task=6 blocks=2
+[pr0231] PARSE FAILED task=7 blocks=2
+[pr0231] PARSE FAILED task=8 blocks=2
+[pr0231] PARSE FAILED task=9 blocks=2
+[pr0231] PARSE FAILED task=10 blocks=2
+[pr0231] PARSE FAILED task=11 blocks=2
+[pr0231] PARSE FAILED task=12 blocks=2
+[pr0231] PARSE FAILED task=13 blocks=2
+[pr0231] PARSE FAILED task=14 blocks=2
+[pr0231] PARSE FAILED task=15 blocks=2
+[pr0231] PARSE FAILED task=16 blocks=2
+[pr0231] PARSE FAILED task=17 blocks=2
+[pr0231] PARSE FAILED task=18 blocks=2
+[pr0231] PARSE FAILED task=19 blocks=2
+[pr0231] PARSE FAILED task=20 blocks=2
+[pr0231] PARSE FAILED task=21 blocks=2
+[pr0231] PARSE FAILED task=22 blocks=2
+[pr0231] PARSE FAILED task=23 blocks=2
+[pr0231] PARSE FAILED task=24 blocks=2
+[pr0231] PARSE FAILED task=25 blocks=2
+[pr0231] PARSE FAILED task=26 blocks=2
+[pr0231] PARSE FAILED task=27 blocks=2
+[pr0231] PARSE FAILED task=28 blocks=2
+[pr0231] PARSE FAILED task=29 blocks=2
+[pr0231] PARSE FAILED task=30 blocks=2
+[pr0231] PARSE FAILED task=31 blocks=2
+[pr0231] PARSE FAILED task=32 blocks=2
+[pr0231] PARSE FAILED task=33 blocks=2
+[pr0231] PARSE FAILED task=34 blocks=2
+{
+  "attempted": 35,
+  "succeeded": 0,
+  "failures": [
+    {
+      "task": "a late fee schedule in cents based on minutesLate",
+      "raw_len": 2891,
+      "blocks": 2
+    },
+    {
+      "task": "a shipping insurance premium in cents based on declaredValueHundreds",
+      "raw_len": 4209,
+      "blocks": 2
+    },
+    {
+      "task": "a customer loyalty point bonus based on ordersThisYear",
+      "raw_len": 2467,
+      "blocks": 2
+    },
+    {
+      "task": "an elevator dispatch priority score based on floorsAway",
+      "raw_len": 1696,
+      "blocks": 2
+    },
+    {
+      "task": "a thermostat energy mode score based on occupancySensorsActive",
+      "raw_len": 2444,
+      "blocks": 2
+    },
+    {
+      "task": "a warehouse pick-path priority based on aisleNumber",
+      "raw_len": 2838,
+      "blocks": 2
+    },
+    {
+      "task": "a support ticket urgency score based on hoursSinceLastReply",
+      "raw_len": 1640,
+      "blocks": 2
+    },
+    {
+      "task": "a video transcode priority based on queueDepth",
+      "raw_len": 2627,
+      "blocks": 2
+    },
+    {
+      "task": "a coupon stacking discount in cents based on itemCount",
+      "raw_len": 2683,
+      "blocks": 2
+    },
+    {
+      "task": "a battery charge rate limit based on temperatureTenthsC",
+      "raw_len": 1587,
+      "blocks": 2
+    },
+    {
+      "task": "a fraud review score based on failedLoginAttempts",
+      "raw_len": 2328,
+      "blocks": 2
+    },
+    {
+      "task": "a delivery route surcharge in cents based on stopsRemaining",
+      "raw_len": 2150,
+      "blocks": 2
+    },
+    {
+      "task": "a parking garage rate in cents based on minutesParked",
+      "raw_len": 2976,
+      "blocks": 2
+    },
+    {
+      "task": "a server autoscale target based on requestsPerSecond",
+      "raw_len": 2816,
+      "blocks": 2
+    },
+    {
+      "task": "a loan interest rate adjustment in basis points based on creditScorePoints",
+      "raw_len": 2348,
+      "blocks": 2
+    },
+    {
+      "task": "a hospital triage priority based on heartRateBpm",
+      "raw_len": 1532,
+      "blocks": 2
+    },
+    {
+      "task": "a subscription renewal discount in cents based on monthsSubscribed",
+      "raw_len": 2266,
+      "blocks": 2
+    },
+    {
+      "task": "a shipment customs risk score based on declaredWeightKg",
+      "raw_len": 2667,
+      "blocks": 2
+    },
+    {
+      "task": "a game matchmaking rating adjustment based on winStreak",
+      "raw_len": 3093,
+      "blocks": 2
+    },
+    {
+      "task": "a call center staffing level based on callsWaiting",
+      "raw_len": 2062,
+      "blocks": 2
+    },
+    {
+      "task": "a irrigation valve duration in seconds based on soilMoisturePercent",
+      "raw_len": 2633,
+      "blocks": 2
+    },
+    {
+      "task": "a cache eviction priority based on lastAccessMinutesAgo",
+      "raw_len": 1836,
+      "blocks": 2
+    },
+    {
+      "task": "a flight boarding group score based on frequentFlyerTier",
+      "raw_len": 2161,
+      "blocks": 2
+    },
+    {
+      "task": "an ad bid multiplier in cents based on clickThroughRatePermille",
+      "raw_len": 3132,
+      "blocks": 2
+    },
+    {
+      "task": "a restaurant table wait estimate in minutes based on partySize",
+      "raw_len": 2762,
+      "blocks": 2
+    },
+    {
+      "task": "a solar panel output adjustment based on cloudCoverPercent",
+      "raw_len": 1412,
+      "blocks": 2
+    },
+    {
+      "task": "a warranty claim payout in cents based on monthsSincePurchase",
+      "raw_len": 2163,
+      "blocks": 2
+    },
+    {
+      "task": "a spam filter score based on linkCountInMessage",
+      "raw_len": 2617,
+      "blocks": 2
+    },
+    {
+      "task": "a gym membership tier fee in cents based on visitsPerMonth",
+      "raw_len": 2207,
+      "blocks": 2
+    },
+    {
+      "task": "a rideshare surge multiplier in cents based on activeRequests",
+      "raw_len": 2354,
+      "blocks": 2
+    },
+    {
+      "task": "a factory conveyor speed setting based on itemsPerMinute",
+      "raw_len": 1728,
+      "blocks": 2
+    },
+    {
+      "task": "a helpdesk escalation score based on reopenCount",
+      "raw_len": 2803,
+      "blocks": 2
+    },
+    {
+      "task": "a vaccine dose interval in days based on ageYears",
+      "raw_len": 2449,
+      "blocks": 2
+    },
+    {
+      "task": "a bandwidth throttle level based on concurrentStreams",
+      "raw_len": 2605,
+      "blocks": 2
+    },
+    {
+      "task": "a payroll overtime multiplier in cents based on hoursOverWeek",
+      "raw_len": 2329,
+      "blocks": 2
+    }
+  ]
+}

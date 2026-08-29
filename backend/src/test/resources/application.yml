@@ -1,0 +1,21 @@
+# Test / measurement profile: an in-memory H2 database in PostgreSQL compatibility mode.
+# Docker Desktop's daemon was not running in the environment this project was built in
+# (`docker ps` fails), so no real PostgreSQL instance was reachable for any number in this
+# README.
+spring:
+  datasource:
+    url: jdbc:h2:mem:merge_gate;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+
+logging:
+  level:
+    com.manas.mergegate: INFO

@@ -1,0 +1,88 @@
+```java
+package com.manas.mergegate.corpus.pr0236;
+
+public final class ClaudeTask0236 {
+
+    private ClaudeTask0236() {
+    }
+
+    public static int compute(int value) {
+        if (value < 10) {
+            return value * 3 + 1;
+        } else if (value < 40) {
+            return value * 2 + 5;
+        } else if (value < 90) {
+            return value + 20;
+        } else {
+            return 100;
+        }
+    }
+}
+```
+
+```java
+package com.manas.mergegate.corpus.pr0236;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+class ClaudeTask0236Test {
+
+    @Test
+    @DisplayName("aisle numbers below 10 use the first branch")
+    void computesLowAisles() {
+        assertEquals(1, ClaudeTask0236.compute(0));
+        assertEquals(4, ClaudeTask0236.compute(1));
+        assertEquals(28, ClaudeTask0236.compute(9));
+    }
+
+    @Test
+    @DisplayName("aisle numbers from 10 to 39 use the second branch")
+    void computesMidAisles() {
+        assertEquals(25, ClaudeTask0236.compute(10));
+        assertEquals(55, ClaudeTask0236.compute(25));
+        assertEquals(83, ClaudeTask0236.compute(39));
+    }
+
+    @Test
+    @DisplayName("aisle numbers from 40 to 89 use the third branch")
+    void computesHighAisles() {
+        assertEquals(60, ClaudeTask0236.compute(40));
+        assertEquals(80, ClaudeTask0236.compute(60));
+        assertEquals(109, ClaudeTask0236.compute(89));
+    }
+
+    @Test
+    @DisplayName("aisle numbers of 90 and above are capped")
+    void capsFarAisles() {
+        assertEquals(100, ClaudeTask0236.compute(90));
+        assertEquals(100, ClaudeTask0236.compute(1000));
+        assertEquals(100, ClaudeTask0236.compute(Integer.MAX_VALUE));
+    }
+
+    @Test
+    @DisplayName("negative aisle numbers fall into the first branch")
+    void handlesNegativeInput() {
+        assertEquals(-2, ClaudeTask0236.compute(-1));
+        assertEquals(-14, ClaudeTask0236.compute(-5));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "9, 28",
+        "10, 25",
+        "39, 83",
+        "40, 60",
+        "89, 109",
+        "90, 100"
+    })
+    @DisplayName("branch boundaries stay on the expected side")
+    void computesBoundaries(int value, int expected) {
+        assertEquals(expected, ClaudeTask0236.compute(value));
+    }
+}
+```

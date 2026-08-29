@@ -1,0 +1,52 @@
+package com.manas.mergegate.corpus.pr0239;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+
+class ClaudeTask0239Test {
+
+    @Test
+    void returnsNoDiscountForEmptyCart() {
+        assertEquals(0, ClaudeTask0239.compute(0));
+    }
+
+    @Test
+    void returnsNoDiscountForNegativeItemCount() {
+        assertEquals(0, ClaudeTask0239.compute(-3));
+    }
+
+    @Test
+    void appliesBaseRateForSmallCarts() {
+        assertEquals(50, ClaudeTask0239.compute(1));
+        assertEquals(200, ClaudeTask0239.compute(4));
+    }
+
+    @Test
+    void appliesMiddleRateForMediumCarts() {
+        assertEquals(250, ClaudeTask0239.compute(5));
+        assertEquals(700, ClaudeTask0239.compute(11));
+        assertEquals(1300, ClaudeTask0239.compute(19));
+    }
+
+    @Test
+    void appliesTopRateForLargeCarts() {
+        assertEquals(1375, ClaudeTask0239.compute(20));
+        assertEquals(1875, ClaudeTask0239.compute(25));
+        assertEquals(9375, ClaudeTask0239.compute(100));
+    }
+
+    @Test
+    void isContinuousAcrossBranchBoundaries() {
+        assertEquals(ClaudeTask0239.compute(4) + 50, ClaudeTask0239.compute(5));
+        assertEquals(ClaudeTask0239.compute(19) + 75, ClaudeTask0239.compute(20));
+    }
+
+    @Test
+    void increasesMonotonicallyWithItemCount() {
+        for (int value = 1; value <= 50; value++) {
+            assertTrue(ClaudeTask0239.compute(value) > ClaudeTask0239.compute(value - 1));
+        }
+    }
+}

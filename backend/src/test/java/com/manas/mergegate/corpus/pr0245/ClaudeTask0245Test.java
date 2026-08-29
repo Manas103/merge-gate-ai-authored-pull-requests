@@ -1,0 +1,61 @@
+package com.manas.mergegate.corpus.pr0245;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+class ClaudeTask0245Test {
+
+    @Test
+    @DisplayName("Deep subprime scores take the largest upward adjustment")
+    void returnsMaxAdjustmentForPoorScores() {
+        assertEquals(250, ClaudeTask0245.compute(300));
+        assertEquals(250, ClaudeTask0245.compute(579));
+    }
+
+    @Test
+    @DisplayName("Fair scores take a reduced adjustment")
+    void returnsReducedAdjustmentForFairScores() {
+        assertEquals(125, ClaudeTask0245.compute(580));
+        assertEquals(125, ClaudeTask0245.compute(669));
+    }
+
+    @Test
+    @DisplayName("Good scores take a small adjustment")
+    void returnsSmallAdjustmentForGoodScores() {
+        assertEquals(25, ClaudeTask0245.compute(670));
+        assertEquals(25, ClaudeTask0245.compute(739));
+    }
+
+    @Test
+    @DisplayName("Excellent scores earn a discount")
+    void returnsDiscountForExcellentScores() {
+        assertEquals(-50, ClaudeTask0245.compute(740));
+        assertEquals(-50, ClaudeTask0245.compute(850));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "579, 250",
+        "580, 125",
+        "669, 125",
+        "670, 25",
+        "739, 25",
+        "740, -50"
+    })
+    @DisplayName("Boundaries fall on the expected side of each branch")
+    void honorsBranchBoundaries(int value, int expected) {
+        assertEquals(expected, ClaudeTask0245.compute(value));
+    }
+
+    @Test
+    @DisplayName("Values outside the usual score range still resolve to a branch")
+    void handlesOutOfRangeValues() {
+        assertEquals(250, ClaudeTask0245.compute(0));
+        assertEquals(250, ClaudeTask0245.compute(Integer.MIN_VALUE));
+        assertEquals(-50, ClaudeTask0245.compute(Integer.MAX_VALUE));
+    }
+}

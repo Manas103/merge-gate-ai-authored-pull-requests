@@ -1,0 +1,12 @@
+Full `mvn test` output includes one JUnit test class per corpus PR unit (245 of them,
+2 to 16 tests each depending on how many branches and edge cases that unit's own test class
+covers); they are omitted here for length. Every one of them passed in this run. The lines
+below are the non-corpus test classes plus the run's final summary.
+
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s -- in com.manas.mergegate.gate.GateEngineTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 s -- in com.manas.mergegate.gate.PitReportParserTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.481 s -- in com.manas.mergegate.integration.MergeGateApiIntegrationTest
+[INFO] Tests run: 654, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+
+Run: `mvn test` from backend/, ~10s including 245 corpus test classes.

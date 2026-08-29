@@ -1,0 +1,486 @@
+{
+  "total" : 60,
+  "falseBlocks" : 0,
+  "missedBlocks" : 0,
+  "rows" : [ {
+    "prId" : "pr0003",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0006",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0018",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0024",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0026",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0032",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0036",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0044",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0047",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0049",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0051",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0057",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0059",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0061",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0062",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0064",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0070",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0086",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0101",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0103",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0106",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0111",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0117",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0119",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0121",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0126",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0129",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0133",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0135",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0142",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0148",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0150",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0151",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0155",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0159",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0162",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0168",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0172",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0181",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0193",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0200",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0214",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0216",
+    "source" : "SYNTHETIC_CURSOR",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : true,
+    "actualBlock" : true,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0225",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0227",
+    "source" : "SYNTHETIC_COPILOT",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0231",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0232",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0233",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0234",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0235",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0236",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0237",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0238",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0239",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0240",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0241",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0242",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0243",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0244",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  }, {
+    "prId" : "pr0245",
+    "source" : "CLAUDE_CODE",
+    "labelMethod" : "generator-construction-label, re-derived by the gate's own covered+weak rule, spot-checked against committed test source",
+    "expectedBlock" : false,
+    "actualBlock" : false,
+    "falseBlock" : false,
+    "missedBlock" : false
+  } ]
+}
