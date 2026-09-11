@@ -24,6 +24,17 @@ describe("App", () => {
         if (input === "/api/holdout") {
           return jsonResponse({ total: 60, falseBlocks: 0, missedBlocks: 2, rows: [] });
         }
+        if (input === "/api/runbook-coverage") {
+          return jsonResponse({
+            totalAlerts: 2, documentedAlerts: 1, undocumentedAlerts: 1,
+            gaps: [{
+              alertId: "ALERT-001", service: "payments-api", severity: "CRITICAL",
+              description: "payment gateway timeout rate exceeds threshold", documented: false,
+              reason: "no documented runbook step",
+            }],
+            alerts: [],
+          });
+        }
         throw new Error("unexpected fetch " + input);
       }),
     );
@@ -39,6 +50,13 @@ describe("App", () => {
     expect(screen.getByText("pr0231")).toBeInTheDocument();
     expect(screen.getByText("BLOCKED")).toBeInTheDocument();
     expect(screen.getByText(/60 hand-labeled PRs/)).toBeInTheDocument();
+  });
+
+  it("names the specific missing runbook step for a flagged alert, not just BLOCKED", async () => {
+    render(<App />);
+    await waitFor(() => expect(screen.getByText(/1 \/ 2 alerts have a documented runbook step/)).toBeInTheDocument());
+    expect(screen.getByText(/ALERT-001 \(payments-api, CRITICAL\)/)).toBeInTheDocument();
+    expect(screen.getByText(/payment gateway timeout rate exceeds threshold/)).toBeInTheDocument();
   });
 
   it("shows an error message when a fetch fails", async () => {

@@ -1,4 +1,4 @@
-import type { HoldoutSummary, PrSummary, Summary } from "./types";
+import type { HoldoutSummary, PrSummary, RunbookCoverageSummary, Summary } from "./types";
 
 async function getJson<T>(path: string): Promise<T> {
   const res = await fetch(path);
@@ -18,6 +18,10 @@ export function fetchPrs(): Promise<PrSummary[]> {
 
 export function fetchHoldout(): Promise<HoldoutSummary> {
   return getJson<HoldoutSummary>("/api/holdout");
+}
+
+export function fetchRunbookCoverage(): Promise<RunbookCoverageSummary> {
+  return getJson<RunbookCoverageSummary>("/api/runbook-coverage");
 }
 
 /** Pure, independent of any network call: what the console shows in the block-rate

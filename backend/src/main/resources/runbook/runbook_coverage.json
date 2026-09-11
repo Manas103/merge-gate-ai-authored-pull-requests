@@ -1,0 +1,300 @@
+{
+  "totalAlerts" : 42,
+  "documentedAlerts" : 24,
+  "undocumentedAlerts" : 18,
+  "alerts" : [ {
+    "alertId" : "ALERT-001",
+    "service" : "payments-service",
+    "severity" : "CRITICAL",
+    "description" : "payments-service latency p99 exceeds SLO",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-001 (payments-service)"
+  }, {
+    "alertId" : "ALERT-002",
+    "service" : "ledger-service",
+    "severity" : "WARNING",
+    "description" : "ledger-service error rate exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-002 (ledger-service)"
+  }, {
+    "alertId" : "ALERT-003",
+    "service" : "auth-service",
+    "severity" : "INFO",
+    "description" : "auth-service queue depth exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-003 (auth-service)"
+  }, {
+    "alertId" : "ALERT-004",
+    "service" : "notification-service",
+    "severity" : "CRITICAL",
+    "description" : "notification-service disk usage exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the notification-service on-call, check the notification-service dashboard for disk usage exceeds threshold, and follow the notification-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-005",
+    "service" : "settlement-service",
+    "severity" : "WARNING",
+    "description" : "settlement-service circuit breaker opened",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the settlement-service on-call, check the settlement-service dashboard for circuit breaker opened, and follow the settlement-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-006",
+    "service" : "fraud-service",
+    "severity" : "INFO",
+    "description" : "fraud-service downstream timeout rate exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-006 (fraud-service)"
+  }, {
+    "alertId" : "ALERT-007",
+    "service" : "reconciliation-service",
+    "severity" : "CRITICAL",
+    "description" : "reconciliation-service replication lag exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-007 (reconciliation-service)"
+  }, {
+    "alertId" : "ALERT-008",
+    "service" : "reporting-service",
+    "severity" : "WARNING",
+    "description" : "reporting-service reconciliation mismatch detected",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-008 (reporting-service)"
+  }, {
+    "alertId" : "ALERT-009",
+    "service" : "gateway-service",
+    "severity" : "INFO",
+    "description" : "gateway-service auth token issuance failure rate exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-009 (gateway-service)"
+  }, {
+    "alertId" : "ALERT-010",
+    "service" : "batch-processing-service",
+    "severity" : "CRITICAL",
+    "description" : "batch-processing-service batch job overrun",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the batch-processing-service on-call, check the batch-processing-service dashboard for batch job overrun, and follow the batch-processing-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-011",
+    "service" : "card-issuance-service",
+    "severity" : "WARNING",
+    "description" : "card-issuance-service certificate expiry approaching",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the card-issuance-service on-call, check the card-issuance-service dashboard for certificate expiry approaching, and follow the card-issuance-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-012",
+    "service" : "risk-scoring-service",
+    "severity" : "INFO",
+    "description" : "risk-scoring-service connection pool exhaustion",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the risk-scoring-service on-call, check the risk-scoring-service dashboard for connection pool exhaustion, and follow the risk-scoring-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-013",
+    "service" : "payments-service",
+    "severity" : "CRITICAL",
+    "description" : "payments-service dead letter queue depth exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the payments-service on-call, check the payments-service dashboard for dead letter queue depth exceeds threshold, and follow the payments-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-014",
+    "service" : "ledger-service",
+    "severity" : "WARNING",
+    "description" : "ledger-service webhook delivery failure rate exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the ledger-service on-call, check the ledger-service dashboard for webhook delivery failure rate exceeds threshold, and follow the ledger-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-015",
+    "service" : "auth-service",
+    "severity" : "INFO",
+    "description" : "auth-service latency p99 exceeds SLO",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-015 (auth-service)"
+  }, {
+    "alertId" : "ALERT-016",
+    "service" : "notification-service",
+    "severity" : "CRITICAL",
+    "description" : "notification-service error rate exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-016 (notification-service)"
+  }, {
+    "alertId" : "ALERT-017",
+    "service" : "settlement-service",
+    "severity" : "WARNING",
+    "description" : "settlement-service queue depth exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-017 (settlement-service)"
+  }, {
+    "alertId" : "ALERT-018",
+    "service" : "fraud-service",
+    "severity" : "INFO",
+    "description" : "fraud-service disk usage exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-018 (fraud-service)"
+  }, {
+    "alertId" : "ALERT-019",
+    "service" : "reconciliation-service",
+    "severity" : "CRITICAL",
+    "description" : "reconciliation-service circuit breaker opened",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the reconciliation-service on-call, check the reconciliation-service dashboard for circuit breaker opened, and follow the reconciliation-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-020",
+    "service" : "reporting-service",
+    "severity" : "WARNING",
+    "description" : "reporting-service downstream timeout rate exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-020 (reporting-service)"
+  }, {
+    "alertId" : "ALERT-021",
+    "service" : "gateway-service",
+    "severity" : "INFO",
+    "description" : "gateway-service replication lag exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the gateway-service on-call, check the gateway-service dashboard for replication lag exceeds threshold, and follow the gateway-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-022",
+    "service" : "batch-processing-service",
+    "severity" : "CRITICAL",
+    "description" : "batch-processing-service reconciliation mismatch detected",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the batch-processing-service on-call, check the batch-processing-service dashboard for reconciliation mismatch detected, and follow the batch-processing-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-023",
+    "service" : "card-issuance-service",
+    "severity" : "WARNING",
+    "description" : "card-issuance-service auth token issuance failure rate exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the card-issuance-service on-call, check the card-issuance-service dashboard for auth token issuance failure rate exceeds threshold, and follow the card-issuance-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-024",
+    "service" : "risk-scoring-service",
+    "severity" : "INFO",
+    "description" : "risk-scoring-service batch job overrun",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the risk-scoring-service on-call, check the risk-scoring-service dashboard for batch job overrun, and follow the risk-scoring-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-025",
+    "service" : "payments-service",
+    "severity" : "CRITICAL",
+    "description" : "payments-service certificate expiry approaching",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the payments-service on-call, check the payments-service dashboard for certificate expiry approaching, and follow the payments-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-026",
+    "service" : "ledger-service",
+    "severity" : "WARNING",
+    "description" : "ledger-service connection pool exhaustion",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the ledger-service on-call, check the ledger-service dashboard for connection pool exhaustion, and follow the ledger-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-027",
+    "service" : "auth-service",
+    "severity" : "INFO",
+    "description" : "auth-service dead letter queue depth exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the auth-service on-call, check the auth-service dashboard for dead letter queue depth exceeds threshold, and follow the auth-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-028",
+    "service" : "notification-service",
+    "severity" : "CRITICAL",
+    "description" : "notification-service webhook delivery failure rate exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-028 (notification-service)"
+  }, {
+    "alertId" : "ALERT-029",
+    "service" : "settlement-service",
+    "severity" : "WARNING",
+    "description" : "settlement-service latency p99 exceeds SLO",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the settlement-service on-call, check the settlement-service dashboard for latency p99 exceeds SLO, and follow the settlement-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-030",
+    "service" : "fraud-service",
+    "severity" : "INFO",
+    "description" : "fraud-service error rate exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the fraud-service on-call, check the fraud-service dashboard for error rate exceeds threshold, and follow the fraud-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-031",
+    "service" : "reconciliation-service",
+    "severity" : "CRITICAL",
+    "description" : "reconciliation-service queue depth exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-031 (reconciliation-service)"
+  }, {
+    "alertId" : "ALERT-032",
+    "service" : "reporting-service",
+    "severity" : "WARNING",
+    "description" : "reporting-service disk usage exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-032 (reporting-service)"
+  }, {
+    "alertId" : "ALERT-033",
+    "service" : "gateway-service",
+    "severity" : "INFO",
+    "description" : "gateway-service circuit breaker opened",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the gateway-service on-call, check the gateway-service dashboard for circuit breaker opened, and follow the gateway-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-034",
+    "service" : "batch-processing-service",
+    "severity" : "CRITICAL",
+    "description" : "batch-processing-service downstream timeout rate exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the batch-processing-service on-call, check the batch-processing-service dashboard for downstream timeout rate exceeds threshold, and follow the batch-processing-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-035",
+    "service" : "card-issuance-service",
+    "severity" : "WARNING",
+    "description" : "card-issuance-service replication lag exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-035 (card-issuance-service)"
+  }, {
+    "alertId" : "ALERT-036",
+    "service" : "risk-scoring-service",
+    "severity" : "INFO",
+    "description" : "risk-scoring-service reconciliation mismatch detected",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the risk-scoring-service on-call, check the risk-scoring-service dashboard for reconciliation mismatch detected, and follow the risk-scoring-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-037",
+    "service" : "payments-service",
+    "severity" : "CRITICAL",
+    "description" : "payments-service auth token issuance failure rate exceeds threshold",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the payments-service on-call, check the payments-service dashboard for auth token issuance failure rate exceeds threshold, and follow the payments-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-038",
+    "service" : "ledger-service",
+    "severity" : "WARNING",
+    "description" : "ledger-service batch job overrun",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the ledger-service on-call, check the ledger-service dashboard for batch job overrun, and follow the ledger-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-039",
+    "service" : "auth-service",
+    "severity" : "INFO",
+    "description" : "auth-service certificate expiry approaching",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the auth-service on-call, check the auth-service dashboard for certificate expiry approaching, and follow the auth-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-040",
+    "service" : "notification-service",
+    "severity" : "CRITICAL",
+    "description" : "notification-service connection pool exhaustion",
+    "documented" : true,
+    "reason" : "documented runbook step present: page the notification-service on-call, check the notification-service dashboard for connection pool exhaustion, and follow the notification-service runbook section for this alert class"
+  }, {
+    "alertId" : "ALERT-041",
+    "service" : "settlement-service",
+    "severity" : "WARNING",
+    "description" : "settlement-service dead letter queue depth exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-041 (settlement-service)"
+  }, {
+    "alertId" : "ALERT-042",
+    "service" : "fraud-service",
+    "severity" : "INFO",
+    "description" : "fraud-service webhook delivery failure rate exceeds threshold",
+    "documented" : false,
+    "reason" : "no documented runbook step for ALERT-042 (fraud-service)"
+  } ]
+}

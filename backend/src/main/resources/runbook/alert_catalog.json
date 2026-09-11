@@ -1,0 +1,254 @@
+[
+  {
+    "alertId": "ALERT-001",
+    "service": "payments-service",
+    "severity": "CRITICAL",
+    "description": "payments-service latency p99 exceeds SLO"
+  },
+  {
+    "alertId": "ALERT-002",
+    "service": "ledger-service",
+    "severity": "WARNING",
+    "description": "ledger-service error rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-003",
+    "service": "auth-service",
+    "severity": "INFO",
+    "description": "auth-service queue depth exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-004",
+    "service": "notification-service",
+    "severity": "CRITICAL",
+    "description": "notification-service disk usage exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-005",
+    "service": "settlement-service",
+    "severity": "WARNING",
+    "description": "settlement-service circuit breaker opened"
+  },
+  {
+    "alertId": "ALERT-006",
+    "service": "fraud-service",
+    "severity": "INFO",
+    "description": "fraud-service downstream timeout rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-007",
+    "service": "reconciliation-service",
+    "severity": "CRITICAL",
+    "description": "reconciliation-service replication lag exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-008",
+    "service": "reporting-service",
+    "severity": "WARNING",
+    "description": "reporting-service reconciliation mismatch detected"
+  },
+  {
+    "alertId": "ALERT-009",
+    "service": "gateway-service",
+    "severity": "INFO",
+    "description": "gateway-service auth token issuance failure rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-010",
+    "service": "batch-processing-service",
+    "severity": "CRITICAL",
+    "description": "batch-processing-service batch job overrun"
+  },
+  {
+    "alertId": "ALERT-011",
+    "service": "card-issuance-service",
+    "severity": "WARNING",
+    "description": "card-issuance-service certificate expiry approaching"
+  },
+  {
+    "alertId": "ALERT-012",
+    "service": "risk-scoring-service",
+    "severity": "INFO",
+    "description": "risk-scoring-service connection pool exhaustion"
+  },
+  {
+    "alertId": "ALERT-013",
+    "service": "payments-service",
+    "severity": "CRITICAL",
+    "description": "payments-service dead letter queue depth exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-014",
+    "service": "ledger-service",
+    "severity": "WARNING",
+    "description": "ledger-service webhook delivery failure rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-015",
+    "service": "auth-service",
+    "severity": "INFO",
+    "description": "auth-service latency p99 exceeds SLO"
+  },
+  {
+    "alertId": "ALERT-016",
+    "service": "notification-service",
+    "severity": "CRITICAL",
+    "description": "notification-service error rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-017",
+    "service": "settlement-service",
+    "severity": "WARNING",
+    "description": "settlement-service queue depth exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-018",
+    "service": "fraud-service",
+    "severity": "INFO",
+    "description": "fraud-service disk usage exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-019",
+    "service": "reconciliation-service",
+    "severity": "CRITICAL",
+    "description": "reconciliation-service circuit breaker opened"
+  },
+  {
+    "alertId": "ALERT-020",
+    "service": "reporting-service",
+    "severity": "WARNING",
+    "description": "reporting-service downstream timeout rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-021",
+    "service": "gateway-service",
+    "severity": "INFO",
+    "description": "gateway-service replication lag exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-022",
+    "service": "batch-processing-service",
+    "severity": "CRITICAL",
+    "description": "batch-processing-service reconciliation mismatch detected"
+  },
+  {
+    "alertId": "ALERT-023",
+    "service": "card-issuance-service",
+    "severity": "WARNING",
+    "description": "card-issuance-service auth token issuance failure rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-024",
+    "service": "risk-scoring-service",
+    "severity": "INFO",
+    "description": "risk-scoring-service batch job overrun"
+  },
+  {
+    "alertId": "ALERT-025",
+    "service": "payments-service",
+    "severity": "CRITICAL",
+    "description": "payments-service certificate expiry approaching"
+  },
+  {
+    "alertId": "ALERT-026",
+    "service": "ledger-service",
+    "severity": "WARNING",
+    "description": "ledger-service connection pool exhaustion"
+  },
+  {
+    "alertId": "ALERT-027",
+    "service": "auth-service",
+    "severity": "INFO",
+    "description": "auth-service dead letter queue depth exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-028",
+    "service": "notification-service",
+    "severity": "CRITICAL",
+    "description": "notification-service webhook delivery failure rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-029",
+    "service": "settlement-service",
+    "severity": "WARNING",
+    "description": "settlement-service latency p99 exceeds SLO"
+  },
+  {
+    "alertId": "ALERT-030",
+    "service": "fraud-service",
+    "severity": "INFO",
+    "description": "fraud-service error rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-031",
+    "service": "reconciliation-service",
+    "severity": "CRITICAL",
+    "description": "reconciliation-service queue depth exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-032",
+    "service": "reporting-service",
+    "severity": "WARNING",
+    "description": "reporting-service disk usage exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-033",
+    "service": "gateway-service",
+    "severity": "INFO",
+    "description": "gateway-service circuit breaker opened"
+  },
+  {
+    "alertId": "ALERT-034",
+    "service": "batch-processing-service",
+    "severity": "CRITICAL",
+    "description": "batch-processing-service downstream timeout rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-035",
+    "service": "card-issuance-service",
+    "severity": "WARNING",
+    "description": "card-issuance-service replication lag exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-036",
+    "service": "risk-scoring-service",
+    "severity": "INFO",
+    "description": "risk-scoring-service reconciliation mismatch detected"
+  },
+  {
+    "alertId": "ALERT-037",
+    "service": "payments-service",
+    "severity": "CRITICAL",
+    "description": "payments-service auth token issuance failure rate exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-038",
+    "service": "ledger-service",
+    "severity": "WARNING",
+    "description": "ledger-service batch job overrun"
+  },
+  {
+    "alertId": "ALERT-039",
+    "service": "auth-service",
+    "severity": "INFO",
+    "description": "auth-service certificate expiry approaching"
+  },
+  {
+    "alertId": "ALERT-040",
+    "service": "notification-service",
+    "severity": "CRITICAL",
+    "description": "notification-service connection pool exhaustion"
+  },
+  {
+    "alertId": "ALERT-041",
+    "service": "settlement-service",
+    "severity": "WARNING",
+    "description": "settlement-service dead letter queue depth exceeds threshold"
+  },
+  {
+    "alertId": "ALERT-042",
+    "service": "fraud-service",
+    "severity": "INFO",
+    "description": "fraud-service webhook delivery failure rate exceeds threshold"
+  }
+]

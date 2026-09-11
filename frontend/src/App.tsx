@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { fetchHoldout, fetchPrs, fetchSummary } from "./api";
+import { fetchHoldout, fetchPrs, fetchRunbookCoverage, fetchSummary } from "./api";
 import { blockRateLabel } from "./api";
-import type { HoldoutSummary, PrSummary, Summary } from "./types";
+import type { HoldoutSummary, PrSummary, RunbookCoverageSummary, Summary } from "./types";
 
 /**
  * A read-only console over the merge gate's own REST API. It shows, per PR, whether the
@@ -14,14 +14,16 @@ export default function App() {
   const [summary, setSummary] = useState<Summary | null>(null);
   const [prs, setPrs] = useState<PrSummary[]>([]);
   const [holdout, setHoldout] = useState<HoldoutSummary | null>(null);
+  const [runbookCoverage, setRunbookCoverage] = useState<RunbookCoverageSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    Promise.all([fetchSummary(), fetchPrs(), fetchHoldout()])
-      .then(([s, p, h]) => {
+    Promise.all([fetchSummary(), fetchPrs(), fetchHoldout(), fetchRunbookCoverage()])
+      .then(([s, p, h, r]) => {
         setSummary(s);
         setPrs(p);
         setHoldout(h);
+        setRunbookCoverage(r);
       })
       .catch((e: Error) => setError(e.message));
   }, []);
@@ -47,6 +49,22 @@ export default function App() {
             Holdout: {holdout.total} hand-labeled PRs, {holdout.falseBlocks} false blocks,{" "}
             {holdout.missedBlocks} missed blocks.
           </p>
+        </section>
+      )}
+      {runbookCoverage && (
+        <section aria-label="runbook coverage gaps">
+          <p>
+            Runbook coverage: {runbookCoverage.documentedAlerts} / {runbookCoverage.totalAlerts} alerts have a
+            documented runbook step. A release is blocked for every alert below, naming the exact missing step,
+            not just "blocked".
+          </p>
+          <ul>
+            {runbookCoverage.gaps.map((gap) => (
+              <li key={gap.alertId}>
+                {gap.alertId} ({gap.service}, {gap.severity}): missing runbook step for "{gap.description}"
+              </li>
+            ))}
+          </ul>
         </section>
       )}
       <table aria-label="pull requests">

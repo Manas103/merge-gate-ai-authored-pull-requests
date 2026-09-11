@@ -1,0 +1,98 @@
+[
+  {
+    "alertId": "ALERT-004",
+    "step": "page the notification-service on-call, check the notification-service dashboard for disk usage exceeds threshold, and follow the notification-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-005",
+    "step": "page the settlement-service on-call, check the settlement-service dashboard for circuit breaker opened, and follow the settlement-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-010",
+    "step": "page the batch-processing-service on-call, check the batch-processing-service dashboard for batch job overrun, and follow the batch-processing-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-011",
+    "step": "page the card-issuance-service on-call, check the card-issuance-service dashboard for certificate expiry approaching, and follow the card-issuance-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-012",
+    "step": "page the risk-scoring-service on-call, check the risk-scoring-service dashboard for connection pool exhaustion, and follow the risk-scoring-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-013",
+    "step": "page the payments-service on-call, check the payments-service dashboard for dead letter queue depth exceeds threshold, and follow the payments-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-014",
+    "step": "page the ledger-service on-call, check the ledger-service dashboard for webhook delivery failure rate exceeds threshold, and follow the ledger-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-019",
+    "step": "page the reconciliation-service on-call, check the reconciliation-service dashboard for circuit breaker opened, and follow the reconciliation-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-021",
+    "step": "page the gateway-service on-call, check the gateway-service dashboard for replication lag exceeds threshold, and follow the gateway-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-022",
+    "step": "page the batch-processing-service on-call, check the batch-processing-service dashboard for reconciliation mismatch detected, and follow the batch-processing-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-023",
+    "step": "page the card-issuance-service on-call, check the card-issuance-service dashboard for auth token issuance failure rate exceeds threshold, and follow the card-issuance-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-024",
+    "step": "page the risk-scoring-service on-call, check the risk-scoring-service dashboard for batch job overrun, and follow the risk-scoring-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-025",
+    "step": "page the payments-service on-call, check the payments-service dashboard for certificate expiry approaching, and follow the payments-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-026",
+    "step": "page the ledger-service on-call, check the ledger-service dashboard for connection pool exhaustion, and follow the ledger-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-027",
+    "step": "page the auth-service on-call, check the auth-service dashboard for dead letter queue depth exceeds threshold, and follow the auth-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-029",
+    "step": "page the settlement-service on-call, check the settlement-service dashboard for latency p99 exceeds SLO, and follow the settlement-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-030",
+    "step": "page the fraud-service on-call, check the fraud-service dashboard for error rate exceeds threshold, and follow the fraud-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-033",
+    "step": "page the gateway-service on-call, check the gateway-service dashboard for circuit breaker opened, and follow the gateway-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-034",
+    "step": "page the batch-processing-service on-call, check the batch-processing-service dashboard for downstream timeout rate exceeds threshold, and follow the batch-processing-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-036",
+    "step": "page the risk-scoring-service on-call, check the risk-scoring-service dashboard for reconciliation mismatch detected, and follow the risk-scoring-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-037",
+    "step": "page the payments-service on-call, check the payments-service dashboard for auth token issuance failure rate exceeds threshold, and follow the payments-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-038",
+    "step": "page the ledger-service on-call, check the ledger-service dashboard for batch job overrun, and follow the ledger-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-039",
+    "step": "page the auth-service on-call, check the auth-service dashboard for certificate expiry approaching, and follow the auth-service runbook section for this alert class"
+  },
+  {
+    "alertId": "ALERT-040",
+    "step": "page the notification-service on-call, check the notification-service dashboard for connection pool exhaustion, and follow the notification-service runbook section for this alert class"
+  }
+]

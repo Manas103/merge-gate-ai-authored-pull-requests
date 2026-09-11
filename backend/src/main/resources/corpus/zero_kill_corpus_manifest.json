@@ -1,0 +1,65 @@
+[
+  {
+    "prId": "pr0246",
+    "className": "AlertLevel0246",
+    "packageName": "com.manas.mergegate.corpus.pr0246",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "alert level classification by raw score, deliberately vacuous test (zero-kill seed)"
+  },
+  {
+    "prId": "pr0247",
+    "className": "ShippingCost0247",
+    "packageName": "com.manas.mergegate.corpus.pr0247",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "shipping cost by package weight, deliberately vacuous test (zero-kill seed)"
+  },
+  {
+    "prId": "pr0248",
+    "className": "InterestRate0248",
+    "packageName": "com.manas.mergegate.corpus.pr0248",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "interest rate basis points by credit score, deliberately vacuous test (zero-kill seed)"
+  },
+  {
+    "prId": "pr0249",
+    "className": "DiscountTier0249",
+    "packageName": "com.manas.mergegate.corpus.pr0249",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "discount amount by order total, deliberately vacuous test (zero-kill seed)"
+  },
+  {
+    "prId": "pr0250",
+    "className": "RiskScore0250",
+    "packageName": "com.manas.mergegate.corpus.pr0250",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "risk score by flag count, deliberately vacuous test (zero-kill seed)"
+  },
+  {
+    "prId": "pr0251",
+    "className": "CreditLimit0251",
+    "packageName": "com.manas.mergegate.corpus.pr0251",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "credit limit by annual income, deliberately vacuous test (zero-kill seed)"
+  },
+  {
+    "prId": "pr0252",
+    "className": "LatencyBucket0252",
+    "packageName": "com.manas.mergegate.corpus.pr0252",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "latency bucket by measured milliseconds, deliberately vacuous test (zero-kill seed)"
+  },
+  {
+    "prId": "pr0253",
+    "className": "QueueTier0253",
+    "packageName": "com.manas.mergegate.corpus.pr0253",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "queue tier by message depth, deliberately vacuous test (zero-kill seed)"
+  },
+  {
+    "prId": "pr0254",
+    "className": "RetryBackoff0254",
+    "packageName": "com.manas.mergegate.corpus.pr0254",
+    "source": "SEEDED_ZERO_KILL",
+    "description": "retry backoff millis by attempt number, deliberately vacuous test (zero-kill seed)"
+  }
+]

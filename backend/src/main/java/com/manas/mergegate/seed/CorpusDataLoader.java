@@ -2,10 +2,14 @@ package com.manas.mergegate.seed;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.manas.mergegate.domain.AlertCoverage;
+import com.manas.mergegate.domain.AlertCoverageRepository;
 import com.manas.mergegate.domain.Branch;
 import com.manas.mergegate.domain.BranchRepository;
 import com.manas.mergegate.domain.HoldoutResult;
 import com.manas.mergegate.domain.HoldoutResultRepository;
+import com.manas.mergegate.domain.MutationScoreResult;
+import com.manas.mergegate.domain.MutationScoreResultRepository;
 import com.manas.mergegate.domain.PrUnit;
 import com.manas.mergegate.domain.PrUnitRepository;
 import org.slf4j.Logger;
@@ -36,13 +40,19 @@ public class CorpusDataLoader implements ApplicationRunner {
     private final PrUnitRepository prUnitRepository;
     private final BranchRepository branchRepository;
     private final HoldoutResultRepository holdoutResultRepository;
+    private final AlertCoverageRepository alertCoverageRepository;
+    private final MutationScoreResultRepository mutationScoreResultRepository;
     private final ObjectMapper mapper = new ObjectMapper();
 
     public CorpusDataLoader(PrUnitRepository prUnitRepository, BranchRepository branchRepository,
-                             HoldoutResultRepository holdoutResultRepository) {
+                             HoldoutResultRepository holdoutResultRepository,
+                             AlertCoverageRepository alertCoverageRepository,
+                             MutationScoreResultRepository mutationScoreResultRepository) {
         this.prUnitRepository = prUnitRepository;
         this.branchRepository = branchRepository;
         this.holdoutResultRepository = holdoutResultRepository;
+        this.alertCoverageRepository = alertCoverageRepository;
+        this.mutationScoreResultRepository = mutationScoreResultRepository;
     }
 
     @Override
@@ -54,8 +64,11 @@ public class CorpusDataLoader implements ApplicationRunner {
         loadPrUnits();
         loadBranchesAndGateDecisions();
         loadHoldout();
-        log.info("seed complete: {} PR units, {} branches, {} holdout rows",
-                prUnitRepository.count(), branchRepository.count(), holdoutResultRepository.count());
+        loadAlertCoverage();
+        loadMutationScoreResults();
+        log.info("seed complete: {} PR units, {} branches, {} holdout rows, {} alerts, {} mutation-score units",
+                prUnitRepository.count(), branchRepository.count(), holdoutResultRepository.count(),
+                alertCoverageRepository.count(), mutationScoreResultRepository.count());
     }
 
     private void loadPrUnits() throws Exception {
@@ -106,6 +119,50 @@ public class CorpusDataLoader implements ApplicationRunner {
                         n.get("prId").asText(), n.get("source").asText(), n.get("labelMethod").asText(),
                         n.get("expectedBlock").asBoolean(), n.get("actualBlock").asBoolean(),
                         n.get("falseBlock").asBoolean(), n.get("missedBlock").asBoolean()));
+            }
+        }
+    }
+
+    /**
+     * Loads the real, committed output of runbook.RunbookCoverageMain: the alert catalog
+     * intersected with the runbook step registry. Independent of the PR/mutation corpus above;
+     * this is the release gate's runbook-coverage rule (see README's "What's new" section).
+     */
+    private void loadAlertCoverage() throws Exception {
+        ClassPathResource resource = new ClassPathResource("runbook/runbook_coverage.json");
+        if (!resource.exists()) {
+            log.warn("no runbook_coverage.json found, skipping alert coverage seed");
+            return;
+        }
+        try (InputStream in = resource.getInputStream()) {
+            JsonNode root = mapper.readTree(in);
+            for (JsonNode n : root.get("alerts")) {
+                alertCoverageRepository.save(new AlertCoverage(
+                        n.get("alertId").asText(), n.get("service").asText(), n.get("severity").asText(),
+                        n.get("description").asText(), n.get("documented").asBoolean(), n.get("reason").asText()));
+            }
+        }
+    }
+
+    /**
+     * Loads the real, committed output of gate.MutationScoreGateMain run against
+     * zero_kill_manifest.json (the 9 seeded zero-kill PR units) and a real
+     * mutations.xml. This is the release gate's mutation-score-floor rule.
+     */
+    private void loadMutationScoreResults() throws Exception {
+        ClassPathResource resource = new ClassPathResource("corpus/mutation_score_results.json");
+        if (!resource.exists()) {
+            log.warn("no mutation_score_results.json found, skipping mutation score seed");
+            return;
+        }
+        try (InputStream in = resource.getInputStream()) {
+            JsonNode root = mapper.readTree(in);
+            for (JsonNode n : root.get("units")) {
+                mutationScoreResultRepository.save(new MutationScoreResult(
+                        n.get("prId").asText(), n.get("killedCount").asInt(), n.get("survivedCount").asInt(),
+                        n.get("noCoverageCount").asInt(), n.get("hasScoreableMutants").asBoolean(),
+                        n.get("score").asDouble(), n.get("belowFloor").asBoolean(),
+                        n.get("zeroKill").asBoolean(), n.get("reason").asText()));
             }
         }
     }

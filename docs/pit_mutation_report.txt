@@ -1,26 +1,34 @@
+11:53:37?AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+11:53:38?AM PIT >> INFO : Created 254 mutation test units in pre scan
+11:53:38?AM PIT >> INFO : Sending 512 test classes to minion
+11:53:38?AM PIT >> INFO : Sent tests to minion
+/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|11:53:39?AM PIT >> INFO : Calculated coverage in 1 seconds.
+11:53:40?AM PIT >> INFO : Created 254 mutation test units
+/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-11:54:14?AM PIT >> INFO : Completed in 36 seconds
+================================================================================
 - Mutators
 ================================================================================
 > org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
->> Generated 361 Killed 43 (12%)
-> KILLED 43 SURVIVED 313 TIMED_OUT 0 NON_VIABLE 0 
+>> Generated 370 Killed 43 (12%)
+> KILLED 43 SURVIVED 322 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 5 
 --------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
->> Generated 596 Killed 528 (89%)
-> KILLED 528 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+>> Generated 614 Killed 528 (86%)
+> KILLED 528 SURVIVED 18 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 68 
 --------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.MathMutator
->> Generated 1133 Killed 846 (75%)
-> KILLED 846 SURVIVED 151 TIMED_OUT 0 NON_VIABLE 0 
+>> Generated 1154 Killed 846 (73%)
+> KILLED 846 SURVIVED 172 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 136 
 --------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
->> Generated 361 Killed 322 (89%)
-> KILLED 322 SURVIVED 34 TIMED_OUT 0 NON_VIABLE 0 
+>> Generated 370 Killed 322 (87%)
+> KILLED 322 SURVIVED 43 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 5 
 --------------------------------------------------------------------------------
@@ -31,22 +39,19 @@
 > scan classpath : < 1 second
 > coverage and dependency analysis : 1 seconds
 > build mutation tests : < 1 second
-> run mutation analysis : 31 seconds
+> run mutation analysis : 34 seconds
 --------------------------------------------------------------------------------
-> Total  : 33 seconds
+> Total  : 36 seconds
 --------------------------------------------------------------------------------
 ================================================================================
 - Statistics
 ================================================================================
->> Line Coverage (for mutated classes only): 896/1229 (73%)
->> Generated 2451 mutations Killed 1739 (71%)
->> Mutations with no coverage 214. Test strength 78%
->> Ran 2748 tests (1.12 tests per mutation)
+>> Line Coverage (for mutated classes only): 923/1265 (73%)
+>> Generated 2508 mutations Killed 1739 (69%)
+>> Mutations with no coverage 214. Test strength 76%
+>> Ran 2825 tests (1.13 tests per mutation)
 Enhanced functionality available at https://www.arcmutate.com/
 
 Build messages:- 
 * Project uses Spring, but the Arcmutate Spring plugin is not present. (https://docs.arcmutate.com/docs/spring.html)
-[INFO] ------------------------------------------------------------------------
-
-gate ingestion: branches=606 flagged=141 covered=528 prs=245 blockedPrs=115 mutants=2451
-holdout evaluation: total=60 falseBlocks=0 missedBlocks=0
+EXIT:0

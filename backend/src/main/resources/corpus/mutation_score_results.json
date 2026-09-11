@@ -1,0 +1,97 @@
+{
+  "floorScore" : 0.7,
+  "totalUnits" : 9,
+  "belowFloorCount" : 9,
+  "zeroKillCount" : 9,
+  "units" : [ {
+    "prId" : "pr0246",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  }, {
+    "prId" : "pr0247",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  }, {
+    "prId" : "pr0248",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  }, {
+    "prId" : "pr0249",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  }, {
+    "prId" : "pr0250",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  }, {
+    "prId" : "pr0251",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  }, {
+    "prId" : "pr0252",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  }, {
+    "prId" : "pr0253",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  }, {
+    "prId" : "pr0254",
+    "killedCount" : 0,
+    "survivedCount" : 2,
+    "noCoverageCount" : 0,
+    "hasScoreableMutants" : true,
+    "score" : 0.0,
+    "belowFloor" : true,
+    "zeroKill" : true,
+    "reason" : "mutation score 0.0% (0 of 2 scoreable mutants killed): test suite passed but killed no mutants"
+  } ]
+}

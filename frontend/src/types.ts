@@ -33,3 +33,20 @@ export interface HoldoutSummary {
   missedBlocks: number;
   rows: HoldoutRow[];
 }
+
+export interface AlertCoverage {
+  alertId: string;
+  service: string;
+  severity: string;
+  description: string;
+  documented: boolean;
+  reason: string;
+}
+
+export interface RunbookCoverageSummary {
+  totalAlerts: number;
+  documentedAlerts: number;
+  undocumentedAlerts: number;
+  gaps: AlertCoverage[];
+  alerts: AlertCoverage[];
+}

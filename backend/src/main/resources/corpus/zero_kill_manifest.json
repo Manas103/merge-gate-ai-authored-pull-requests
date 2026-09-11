@@ -1,0 +1,164 @@
+[
+  {
+    "prId": "pr0246",
+    "branchId": "pr0246-b0",
+    "className": "AlertLevel0246",
+    "fqcn": "com.manas.mergegate.corpus.pr0246.AlertLevel0246",
+    "lineNumber": 10,
+    "description": "alert level classification by raw score, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0246",
+    "branchId": "pr0246-b1",
+    "className": "AlertLevel0246",
+    "fqcn": "com.manas.mergegate.corpus.pr0246.AlertLevel0246",
+    "lineNumber": 13,
+    "description": "alert level classification by raw score, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0247",
+    "branchId": "pr0247-b0",
+    "className": "ShippingCost0247",
+    "fqcn": "com.manas.mergegate.corpus.pr0247.ShippingCost0247",
+    "lineNumber": 10,
+    "description": "shipping cost by package weight, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0247",
+    "branchId": "pr0247-b1",
+    "className": "ShippingCost0247",
+    "fqcn": "com.manas.mergegate.corpus.pr0247.ShippingCost0247",
+    "lineNumber": 13,
+    "description": "shipping cost by package weight, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0248",
+    "branchId": "pr0248-b0",
+    "className": "InterestRate0248",
+    "fqcn": "com.manas.mergegate.corpus.pr0248.InterestRate0248",
+    "lineNumber": 10,
+    "description": "interest rate basis points by credit score, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0248",
+    "branchId": "pr0248-b1",
+    "className": "InterestRate0248",
+    "fqcn": "com.manas.mergegate.corpus.pr0248.InterestRate0248",
+    "lineNumber": 13,
+    "description": "interest rate basis points by credit score, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0249",
+    "branchId": "pr0249-b0",
+    "className": "DiscountTier0249",
+    "fqcn": "com.manas.mergegate.corpus.pr0249.DiscountTier0249",
+    "lineNumber": 10,
+    "description": "discount amount by order total, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0249",
+    "branchId": "pr0249-b1",
+    "className": "DiscountTier0249",
+    "fqcn": "com.manas.mergegate.corpus.pr0249.DiscountTier0249",
+    "lineNumber": 13,
+    "description": "discount amount by order total, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0250",
+    "branchId": "pr0250-b0",
+    "className": "RiskScore0250",
+    "fqcn": "com.manas.mergegate.corpus.pr0250.RiskScore0250",
+    "lineNumber": 10,
+    "description": "risk score by flag count, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0250",
+    "branchId": "pr0250-b1",
+    "className": "RiskScore0250",
+    "fqcn": "com.manas.mergegate.corpus.pr0250.RiskScore0250",
+    "lineNumber": 13,
+    "description": "risk score by flag count, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0251",
+    "branchId": "pr0251-b0",
+    "className": "CreditLimit0251",
+    "fqcn": "com.manas.mergegate.corpus.pr0251.CreditLimit0251",
+    "lineNumber": 10,
+    "description": "credit limit by annual income, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0251",
+    "branchId": "pr0251-b1",
+    "className": "CreditLimit0251",
+    "fqcn": "com.manas.mergegate.corpus.pr0251.CreditLimit0251",
+    "lineNumber": 13,
+    "description": "credit limit by annual income, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0252",
+    "branchId": "pr0252-b0",
+    "className": "LatencyBucket0252",
+    "fqcn": "com.manas.mergegate.corpus.pr0252.LatencyBucket0252",
+    "lineNumber": 10,
+    "description": "latency bucket by measured milliseconds, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0252",
+    "branchId": "pr0252-b1",
+    "className": "LatencyBucket0252",
+    "fqcn": "com.manas.mergegate.corpus.pr0252.LatencyBucket0252",
+    "lineNumber": 13,
+    "description": "latency bucket by measured milliseconds, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0253",
+    "branchId": "pr0253-b0",
+    "className": "QueueTier0253",
+    "fqcn": "com.manas.mergegate.corpus.pr0253.QueueTier0253",
+    "lineNumber": 10,
+    "description": "queue tier by message depth, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0253",
+    "branchId": "pr0253-b1",
+    "className": "QueueTier0253",
+    "fqcn": "com.manas.mergegate.corpus.pr0253.QueueTier0253",
+    "lineNumber": 13,
+    "description": "queue tier by message depth, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0254",
+    "branchId": "pr0254-b0",
+    "className": "RetryBackoff0254",
+    "fqcn": "com.manas.mergegate.corpus.pr0254.RetryBackoff0254",
+    "lineNumber": 10,
+    "description": "retry backoff millis by attempt number, deliberately vacuous test (zero-kill seed), branch 0 (<= threshold)",
+    "constructionQuality": "VACUOUS"
+  },
+  {
+    "prId": "pr0254",
+    "branchId": "pr0254-b1",
+    "className": "RetryBackoff0254",
+    "fqcn": "com.manas.mergegate.corpus.pr0254.RetryBackoff0254",
+    "lineNumber": 13,
+    "description": "retry backoff millis by attempt number, deliberately vacuous test (zero-kill seed), branch 1 (> threshold)",
+    "constructionQuality": "VACUOUS"
+  }
+]
