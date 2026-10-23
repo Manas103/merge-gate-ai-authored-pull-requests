@@ -1,4 +1,4 @@
-Default test run (`mvn test` from backend/), 684 tests, all passing.
+Default test run (`mvn test` from backend/), 688 tests, all passing.
 
 Tests run: 6, Failures: 0, Errors: 0, Skipped: 0 -- GateEngineTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- PitReportParserTest
@@ -6,10 +6,18 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 -- MergeGateApiIntegrationTest
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0 -- MutationScoreGateTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0 -- RunbookCoverageCheckerTest
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 -- ReleaseGateApiIntegrationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 103.1 s -- OrderingOracleReportTest
 ... plus 254 corpus PR-unit test classes (245 original + 9 seeded zero-kill units)
-Tests run: 684, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 688, Failures: 0, Errors: 0, Skipped: 0
 BUILD SUCCESS
 
 MergeGateApiIntegrationTest and ReleaseGateApiIntegrationTest boot the real Spring context
 against H2 and the CorpusDataLoader seed log confirms:
 seed complete: 245 PR units, 606 branches, 60 holdout rows, 42 alerts, 9 mutation-score units
+
+OrderingOracleReportTest (new) runs the 40-patch ordering/durability corpus end to end: the
+reference log passes both checks, every bugged patch fails at least one, the two immediate-bug
+kinds are caught by the existing test alone, and the oracle never flags a correct implementation.
+Its 103s runtime is almost entirely the concurrent property check (8 threads x 50 ops, run once
+per patch, several of which deliberately sleep inside their critical section to make a race
+reproduce reliably); see docs/ordering_oracle_output.txt for the full per-patch report.

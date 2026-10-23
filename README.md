@@ -1,6 +1,6 @@
 # Merge Gate for AI-Authored Pull Requests / Release Gate with Runbook Coverage and Mutation Testing
 
-A CI gate that runs real mutation testing (PIT) over a corpus of small pull-request-sized Java units and blocks a PR when one of its branches is line-covered by its own test yet a mutation of that branch still survives, meaning the covering test executes the branch but never actually asserts on its effect. Extended with two more rules over the same real PIT run: a mutation-score floor that blocks any PR unit scoring below 70% (which catches a suite that passes while killing zero mutants outright), and a runbook-coverage rule that blocks a release for any alert a service can raise with no documented runbook step. Java 21, Spring Boot 3.3.4, Spring Data JPA, PostgreSQL (H2 in PostgreSQL-compatibility mode for tests), PIT 1.17.0, TypeScript/React console, GitHub Actions. Every number below was measured on this machine by running the real gate over a real, committed corpus, not targeted in advance.
+A CI gate that runs real mutation testing (PIT) over a corpus of small pull-request-sized Java units and blocks a PR when one of its branches is line-covered by its own test yet a mutation of that branch still survives, meaning the covering test executes the branch but never actually asserts on its effect. Extended with three more rules over the same real PIT run: a mutation-score floor that blocks any PR unit scoring below 70% (which catches a suite that passes while killing zero mutants outright), a runbook-coverage rule that blocks a release for any alert a service can raise with no documented runbook step, and a property-based ordering and durability oracle that catches a class of defect none of PIT's branch mutants are shaped to find: a patch that is fully branch-covered and still violates an invariant (strictly increasing offsets, durable reads) that no single branch assertion states. Java 21, Spring Boot 3.3.4, Spring Data JPA, PostgreSQL (H2 in PostgreSQL-compatibility mode for tests), PIT 1.17.0, TypeScript/React console, GitHub Actions. Every number below was measured on this machine by running the real gate over a real, committed corpus, not targeted in advance.
 
 ## Why this exists
 
@@ -14,6 +14,7 @@ A company that ships a large fraction of its code through LLM coding assistants 
 - **Machine and toolchain.** 8 physical / 16 logical cores, Windows 11 Home. JDK 21 (Temurin), Maven 3.9.9, Spring Boot 3.3.4, PIT 1.17.0 (`pitest-maven`, `pitest-junit5-plugin`), Node v22.17.1 / npm 10.9.2, Vite 5.4, React 18, Vitest 2.1. Docker Desktop's daemon was not running in this environment (`docker ps` fails), so every measured number uses H2 in PostgreSQL-compatibility mode, not a real PostgreSQL instance; `docker-compose.yml` documents the real stack.
 - **The 42-alert catalog is a synthetic catalog representative of a bank's alerting surface, not a real production catalog.** `scripts/generate_runbook_catalog.py` seeded 42 alert definitions (id, owning service, severity, description) and deliberately left 18 of them with no corresponding entry in the runbook step registry; there is no real on-call rotation, real PagerDuty/Opsgenie integration, or real production incident history behind any of these 42 alerts.
 - **The `.github/workflows/ci.yml` GitHub Actions workflow runs the same commands documented below in "Building and running."** No measured number in this README comes from a GitHub-hosted run of that workflow; every number here was measured locally on the machine spec stated above. The workflow file is real and runs these exact commands, it has just not itself been the source of any reported measurement.
+- **The ordering/durability oracle's corpus is a themed analog of the log store's invariants, not the log store's actual compiled code.** `projects/partitioned-log-raft-metadata` is a separate repository with its own build; this gate does not compile or import it. `com.manas.mergegate.ordering` instead re-states that project's two core invariants (offsets strictly increase with no gaps or repeats; a durable append is always readable back unchanged) as a small `AppendLog` interface, and runs a corpus of 40 patches against it: 5 correct reference implementations and 35 patches with an injected bug plausible for an agent editing an append path (a periodic off-by-one in the returned offset, a periodic silent drop, a bounded ring buffer that quietly overwrites old offsets, and three flavors of an unsynchronized-counter race that only misbehaves under concurrency). This keeps the two repositories independent (see the pipeline's "stages are blind downstream" rule) while still exercising the real invariant.
 
 ## Architecture
 
@@ -37,6 +38,16 @@ backend/src/main/java/com/manas/mergegate/
     RunbookCoverageChecker.java         NEW: flags every alert with no matching documented step
     RunbookCoverageResult.java          NEW: per-alert documented/undocumented decision with a named reason
     RunbookCoverageMain.java            NEW: batch tool: alert_catalog.json + runbook_steps.json -> runbook_coverage.json
+  ordering/
+    AppendLog.java                      NEW: the two invariants as an interface (append/read)
+    ReferenceAppendLog.java             NEW: the obviously-correct implementation the oracle checks against
+    OrderingDurabilityOracle.java       NEW: property-based check, single-threaded and concurrent
+    PatchCorpus.java                    NEW: 40 patches (5 correct, 35 bugged) plus the weak existing-style unit test
+    OffByOneReturnEveryN.java, SilentDropEveryN.java, RaceyCounterLog.java,
+    BoundedRingBufferLog.java, FirstAppendOffByOne.java, DelayedWriteRaceLog.java,
+    OffByOneStorageIndex.java, LostUpdateCounterLog.java   NEW: the 8 bug kinds, parameterized
+    OrderingOracleReport.java           NEW: runs every patch through both checks, tallies the result
+    OrderingOracleMain.java             NEW: batch tool, prints the full per-patch report
   domain/                               PrUnit, Branch, HoldoutResult, AlertCoverage (NEW), MutationScoreResult (NEW)
   seed/CorpusDataLoader.java            loads the real, committed pipeline output into the database on startup
   api/
@@ -51,6 +62,8 @@ backend/src/test/java/com/manas/mergegate/
   gate/PitReportParserTest.java         parses a hand-written mutations.xml fixture
   gate/MutationScoreGateTest.java       NEW: below-floor, at-floor, zero-kill and no-scoreable-mutants cases
   runbook/RunbookCoverageCheckerTest.java   NEW: flags exactly the 18 seeded gaps across the real 42-alert catalog
+  ordering/OrderingOracleReportTest.java    NEW: reference log passes both checks; every bug kind fails at least one;
+                                             the two immediate-bug kinds are caught by the existing test already
   integration/MergeGateApiIntegrationTest.java   real Spring context + H2, asserts the loader and API reflect the real gate run
   integration/ReleaseGateApiIntegrationTest.java NEW: same, for the two new endpoints
 scripts/
@@ -81,9 +94,11 @@ docs/
 
 **Why the runbook-coverage rule is a completely independent domain from the PR/mutation corpus.** `AlertDef`/`RunbookStep`/`RunbookCoverageChecker` know nothing about `BranchGateResult`, PIT, or the 245-PR corpus; they operate on a small, self-contained catalog of 42 alert definitions and a registry of documented runbook steps. The two rules are combined only at the release-gate level (both can independently block a release) and in the frontend console (both are shown side by side); this keeps the "which service can raise an alert with no runbook" question answerable without needing a PR unit or a mutation run to exist at all.
 
+**Why the ordering/durability oracle exists as a third, separate rule rather than a change to `GateEngine`.** PIT's mutants are local, syntactic changes (flip a conditional, shift a boundary, change a return value) checked against whatever the existing test asserts; they cannot manufacture a *new* property to check, such as "every offset this log hands out across a 500-operation run is unique." A patch can be fully branch-covered, kill every mutant PIT tries against those branches, and still violate that property if the property was never one of the branches in the first place (a race between two threads, or a bug that only manifests on the 500th call). `OrderingDurabilityOracle` checks two such properties directly, by generating a long random operation sequence (single-threaded) and then a concurrent one (8 threads), rather than by mutating existing assertions. `PatchCorpus.existingUnitTestPasses` is deliberately the same depth of check a fast, happy-path AI-authored unit test realistically performs (three known records, checked by value): most of the corpus's 35 bugs are built to slip past exactly that check and get caught only by the longer, randomized, concurrent oracle. Two bug kinds (`immediate-offset-bug`, `immediate-storage-bug`) are wrong from the very first call and are included as a contrast: they are caught by the existing test too, which is the sanity check that the corpus is not rigged to flatter the new oracle.
+
 ## Validation
 
-Default test run (254 corpus PR-unit test classes, 245 original plus 9 seeded zero-kill units, plus the gate, runbook and integration tests), 684 tests, all passing (`docs/test_output.txt`):
+Default test run (254 corpus PR-unit test classes, 245 original plus 9 seeded zero-kill units, plus the gate, runbook, ordering and integration tests), 688 tests, all passing (`docs/test_output.txt`):
 
 ```
 Tests run: 6, Failures: 0, Errors: 0, Skipped: 0 -- GateEngineTest
@@ -92,7 +107,8 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 -- MergeGateApiIntegrationTest
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0 -- MutationScoreGateTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0 -- RunbookCoverageCheckerTest
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 -- ReleaseGateApiIntegrationTest
-Tests run: 684, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 103.1 s -- OrderingOracleReportTest
+Tests run: 688, Failures: 0, Errors: 0, Skipped: 0
 BUILD SUCCESS
 ```
 
@@ -101,6 +117,8 @@ BUILD SUCCESS
 `MutationScoreGateTest` (new) exercises the rollup directly: a PR at 40% (below floor), a PR at exactly 70% (meets floor, boundary case), a PR with zero kills across two branches (`zeroKill()` true), and a PR with only `NO_COVERAGE` branches (`hasScoreableMutants()` false, not fabricated as below floor just because it has no scoreable mutants).
 
 `RunbookCoverageCheckerTest` (new) loads the real, committed 42-alert catalog and runbook step registry (`scripts/generate_runbook_catalog.py`'s committed output, not a hand-rolled fixture) and asserts the checker flags exactly the 18 seeded gaps and none of the other 24, by an id set read off the generator's own printed output at generation time.
+
+`OrderingOracleReportTest` (new) asserts the reference log passes both the existing-style unit test and the property oracle; that every one of the 35 bugged patches fails at least one of the two checks (the corpus is not accidentally all-correct); that the two immediate-bug kinds are caught by the existing test on their own, as the designed contrast case; and that the oracle never flags a correct implementation. `OrderingOracleMain` prints the full 40-row report; its committed output (`docs/ordering_oracle_output.txt`) is where the 26-of-40 figure in "Measured results" comes from.
 
 `MergeGateApiIntegrationTest` and `ReleaseGateApiIntegrationTest` boot the real Spring context against H2 and assert the loader populated exactly the real committed corpus and catalog (245 PRs, 606 branches, 60 holdout rows, 42 alerts, 9 mutation-score units) and that the REST API serves the real gate run's numbers.
 
@@ -118,7 +136,7 @@ The fix surfaced a second, smaller and genuinely interesting defect: two of the 
 
 ## Measured results
 
-Machine: 8 physical / 16 logical cores, Windows 11 Home, JDK 21 Temurin, Maven 3.9.9, PIT 1.17.0. Run: `mvn org.pitest:pitest-maven:mutationCoverage` from `backend/`, then `GateReportIngestorMain`, `HoldoutEvaluatorMain` and `MutationScoreGateMain` (exact commands in "Building and running"). Mutators configured: `CONDITIONALS_BOUNDARY`, `NEGATE_CONDITIONALS`, `MATH`, `TRUE_RETURNS`, `FALSE_RETURNS`, `PRIMITIVE_RETURNS`, `EMPTY_RETURNS`, `INCREMENTS`, `INVERT_NEGS`; only the first four generated any mutants, since this corpus's flat integer if/else-if/else style has no applicable operation for the other five (see "Limitations"). PIT reports 0 mutants for a mutator with nothing to mutate rather than an error.
+Machine: AMD Ryzen 7 7800X3D, 8 physical / 16 logical cores, 32 GB RAM, Windows 11, JDK 21 Temurin, Maven 3.9.9, PIT 1.17.0. Run: `mvn org.pitest:pitest-maven:mutationCoverage` from `backend/`, then `GateReportIngestorMain`, `HoldoutEvaluatorMain` and `MutationScoreGateMain` (exact commands in "Building and running"); the ordering-oracle row is `OrderingOracleMain`, plain `java`, no PIT and no PR corpus involved. Mutators configured: `CONDITIONALS_BOUNDARY`, `NEGATE_CONDITIONALS`, `MATH`, `TRUE_RETURNS`, `FALSE_RETURNS`, `PRIMITIVE_RETURNS`, `EMPTY_RETURNS`, `INCREMENTS`, `INVERT_NEGS`; only the first four generated any mutants, since this corpus's flat integer if/else-if/else style has no applicable operation for the other five (see "Limitations"). PIT reports 0 mutants for a mutator with nothing to mutate rather than an error.
 
 | Metric | Measured | Claim | Meets claim |
 |---|---|---|---|
@@ -129,15 +147,18 @@ Machine: 8 physical / 16 logical cores, Windows 11 Home, JDK 21 Temurin, Maven 3
 | **Zero-kill suites rejected** | **9 of 9** seeded zero-kill PR units scored 0.0% and blocked by the mutation-score floor | rejected 9 of 9 suites that passed while killing no mutants | yes |
 | Mutation-score floor blocks below 70% | `MutationScoreGateTest`: 40% blocked, 70% (boundary) not blocked, zero-kill always blocked, no-scoreable-mutants never fabricated as blocked | blocks any merge whose PIT mutation score falls below 70% | yes |
 | Console names the missing step | `App.test.tsx`: renders `ALERT-001 (payments-api, CRITICAL): missing runbook step for "..."`, not just "BLOCKED" | TypeScript reviewer console names the missing step | yes |
+| **Ordering/durability oracle** | **26 of 40** patches passed the existing (three-record) unit test and were caught only by the new property-based oracle | 31 patches that passed the existing unit suite caught breaking an ordering invariant | no, see note below |
 
 The corpus-scale claim is honestly split into two separable parts. The count (over 240) is genuinely met: 245 PR units exist, compile, and pass their own tests. The three-tool provenance is not genuinely met: only the 15 `CLAUDE_CODE` units were actually produced by a live coding-assistant call; the 230 `SYNTHETIC_CURSOR`/`SYNTHETIC_COPILOT` units are a scripted generator with those labels attached for corpus bookkeeping, because Cursor and GitHub Copilot have no headless CLI available in this environment. The branch-count and flagged-count claims (384 and 118) were not tuned toward; this corpus and its real, committed test files produce 606 tracked branches and 141 flagged ones. Both are larger than the resume bullet's numbers, in the same direction (more branches, proportionally similar flag rate: 141/606 = 23.3% here versus 118/384 = 30.7% in the original bullet), but they are not the same numbers, and are reported as measured rather than adjusted. The holdout claim is met exactly: of the 60 hand-labeled PRs, the real gate produced 0 false blocks and, as a bonus honest disclosure beyond what the resume claims, 0 missed blocks as well. The runbook-coverage and zero-kill-suite claims are both met exactly against a real, committed catalog and a real PIT run, not a hand-computed number.
+
+The ordering/durability oracle claim was not tuned toward either: the corpus was designed first (8 bug kinds, chosen to be plausible agent mistakes, parameterized to 35 bugged patches plus 5 correct references), then run once and reported as measured. Of 40 patches, 31 passed the existing three-record unit test (`existingPassed=true` in `docs/ordering_oracle_output.txt`): the 5 correct references (which should pass) plus 26 of the 35 bugged patches (the ones built to slip past a short, happy-path check). All 35 bugged patches were caught by the new oracle and none of the 5 correct references were, so the oracle has zero false positives and zero false negatives against this corpus. The intersection the resume bullet describes, passed the existing test and caught only by the oracle, is therefore exactly those 26 bugged-but-passing patches, not 31: the other 5 of the 31 "existing test passed" patches are the correct references, which the oracle is right not to catch, and the remaining 9 bugged patches (the two immediate-bug kinds, included as a contrast) are caught by the existing test already and so were never in this intersection to begin with. 26 is the real, measured count; it was not resized after the fact to approach 31.
 
 ## Building and running
 
 ```
 export PATH="/c/Users/Manas/tools/apache-maven-3.9.9/bin:$PATH"   # or the equivalent mvn on PATH
 cd backend
-mvn test                                                # 684 tests, ~10s
+mvn test                                                # 688 tests, ~2 min (the ordering oracle's concurrent checks dominate)
 
 # Regenerate the corpus from scratch (not needed to reproduce the numbers above; the
 # corpus is already committed under src/main/resources/corpus and src/main/java/.../corpus):
@@ -158,6 +179,9 @@ java -cp "target/classes;$(cat /tmp/cp.txt)" com.manas.mergegate.gate.HoldoutEva
 java -cp "target/classes;$(cat /tmp/cp.txt)" com.manas.mergegate.gate.MutationScoreGateMain \
      src/main/resources/corpus/zero_kill_manifest.json target/pit-reports/mutations.xml \
      src/main/resources/corpus/mutation_score_results.json
+
+# ordering/durability oracle (plain java, no PIT, no Spring context, uses the classpath file built above)
+java -cp "target/classes;$(cat /tmp/cp.txt)" com.manas.mergegate.ordering.OrderingOracleMain > ../docs/ordering_oracle_output.txt
 
 mvn spring-boot:run                                      # serves the API on :8080 from the committed gate/runbook JSON
 
@@ -182,3 +206,5 @@ The nearest existing repository by stack and by "gate that blocks a merge" shape
 Cursor and GitHub Copilot contributed no code to this corpus; see "Honest framing" and "Measured results" for exactly what was and was not genuinely tool-sourced. The gate operates on a corpus of independent single-method units, not real multi-file pull request diffs; there is no git-diff parsing, no cross-file analysis, and no handling of a branch that spans multiple methods or classes. The 60-PR holdout's ground truth is re-derived from the corpus generator's own construction labels rather than from an external human reviewer with no knowledge of how the corpus was built, which is disclosed exactly in "Honest framing" rather than presented as a blind, independent audit. Five of the nine configured mutators (`INCREMENTS`, `INVERT_NEGS`, `TRUE_RETURNS`, `FALSE_RETURNS`, `EMPTY_RETURNS`) generated zero mutants against this corpus's style (flat integer comparisons and literal `int` returns, no `++`/`--`, unary negation, boolean returns or object/empty-collection returns), so the flagged-branch count reflects the four mutators that actually fired (`CONDITIONALS_BOUNDARY`, `NEGATE_CONDITIONALS`, `MATH`, `PRIMITIVE_RETURNS`), not all nine configured.
 
 The 42-alert catalog is synthetic, representative of a bank's alerting surface rather than a real production catalog (see "Honest framing"); there is no real on-call system, real PagerDuty/Opsgenie integration, or real incident history behind it. The runbook-coverage rule matches an alert to a documented step by alert id only; it does not parse a real pull request diff to determine which alerts a *changed* service can newly raise, so "blocks any merge whose service can raise an alert with no documented runbook step" is checked against the full static catalog, not against a diff. The GitHub Actions workflow has not itself been the source of any measured number in this README (see "Honest framing").
+
+The ordering/durability oracle's corpus is self-contained and thematic, not the log store's real compiled code (see "Honest framing"); a patch that genuinely compiled against `partitioned-log-raft-metadata` and passed its real `ClusterTest` suite was never run through this oracle. The 8 bug kinds are hand-designed to be plausible, not drawn from a real population of agent-authored patches, so the 26-of-40 ratio describes this specific, hand-built corpus rather than an empirical rate at which AI patches break log invariants in general. The concurrent check uses 8 threads and 50 operations each every time; it was not tuned per bug kind to find the smallest reproduction, so a race that needs a different thread count or operation mix to manifest could in principle pass undetected here.

@@ -1,0 +1,45 @@
+correct-0                        none                     existingPassed=true  oracleCaught=false 
+correct-1                        none                     existingPassed=true  oracleCaught=false 
+correct-2                        none                     existingPassed=true  oracleCaught=false 
+correct-3                        none                     existingPassed=true  oracleCaught=false 
+correct-4                        none                     existingPassed=true  oracleCaught=false 
+off-by-one-return-every-5        periodic-offset-skip     existingPassed=true  oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [0, 1, 2, 3, 5, 5, 6, 7, 8, 10]...
+off-by-one-return-every-7        periodic-offset-skip     existingPassed=true  oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [0, 1, 2, 3, 4, 5, 7, 7, 8, 9]...
+off-by-one-return-every-11       periodic-offset-skip     existingPassed=true  oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]...
+off-by-one-return-every-17       periodic-offset-skip     existingPassed=true  oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]...
+off-by-one-return-every-23       periodic-offset-skip     existingPassed=true  oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]...
+silent-drop-every-4              periodic-durability-loss existingPassed=true  oracleCaught=true  durability: offset 3 should read back "rec-3-948884" but got "null"
+silent-drop-every-6              periodic-durability-loss existingPassed=true  oracleCaught=true  durability: offset 5 should read back "rec-5-87525" but got "null"
+silent-drop-every-9              periodic-durability-loss existingPassed=true  oracleCaught=true  durability: offset 8 should read back "rec-8-255519" but got "null"
+silent-drop-every-13             periodic-durability-loss existingPassed=true  oracleCaught=true  durability: offset 12 should read back "rec-12-955276" but got "null"
+silent-drop-every-19             periodic-durability-loss existingPassed=true  oracleCaught=true  durability: offset 18 should read back "rec-18-268743" but got "null"
+racey-counter-1                  unsynchronized-counter   existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 190 distinct offsets
+racey-counter-2                  unsynchronized-counter   existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 244 distinct offsets
+racey-counter-3                  unsynchronized-counter   existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 134 distinct offsets
+racey-counter-5                  unsynchronized-counter   existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 92 distinct offsets
+racey-counter-8                  unsynchronized-counter   existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 80 distinct offsets
+ring-buffer-overwrite-15         bounded-overwrite        existingPassed=true  oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+ring-buffer-overwrite-20         bounded-overwrite        existingPassed=true  oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+ring-buffer-overwrite-30         bounded-overwrite        existingPassed=true  oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+ring-buffer-overwrite-50         bounded-overwrite        existingPassed=true  oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+ring-buffer-overwrite-80         bounded-overwrite        existingPassed=true  oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+first-append-off-by-one-0        immediate-offset-bug     existingPassed=false oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...
+first-append-off-by-one-1        immediate-offset-bug     existingPassed=false oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...
+first-append-off-by-one-2        immediate-offset-bug     existingPassed=false oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...
+first-append-off-by-one-3        immediate-offset-bug     existingPassed=false oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...
+first-append-off-by-one-4        immediate-offset-bug     existingPassed=false oracleCaught=true  ordering: expected offsets to be a permutation of 0..499 but sorted offsets were [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...
+delayed-write-race-1             read-then-add-race       existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 52 distinct offsets
+delayed-write-race-2             read-then-add-race       existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 51 distinct offsets
+delayed-write-race-3             read-then-add-race       existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 50 distinct offsets
+storage-index-off-by-one-0       immediate-storage-bug    existingPassed=false oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+storage-index-off-by-one-1       immediate-storage-bug    existingPassed=false oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+storage-index-off-by-one-2       immediate-storage-bug    existingPassed=false oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+storage-index-off-by-one-3       immediate-storage-bug    existingPassed=false oracleCaught=true  durability: offset 0 should read back "rec-0-431130" but got "null"
+lost-update-counter-0            lost-update-race         existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 50 distinct offsets
+lost-update-counter-1            lost-update-race         existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 50 distinct offsets
+lost-update-counter-2            lost-update-race         existingPassed=true  oracleCaught=true  ordering under concurrency: 400 appends from 8 threads should produce a permutation of 0..399 with no duplicates, got 50 distinct offsets
+
+total patches: 40
+passed existing unit test: 31
+caught by ordering/durability oracle: 35
+passed existing unit test AND caught by oracle: 26
