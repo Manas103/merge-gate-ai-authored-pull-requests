@@ -1,0 +1,422 @@
+[
+  {
+    "id": "TAINT-01",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup1(@RequestParam String requestId) {\n    Statement stmt = connection.createStatement();\n    return stmt.executeQuery(\"SELECT * FROM accounts WHERE account_id = '\" + requestId + \"'\");\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-sql-concat"
+  },
+  {
+    "id": "TAINT-02",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup2(@RequestParam String accountRef) {\n    Statement stmt = connection.createStatement();\n    return stmt.executeQuery(\"SELECT * FROM invoices WHERE email = '\" + accountRef + \"'\");\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-sql-concat"
+  },
+  {
+    "id": "TAINT-03",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup3(@RequestParam String lookupKey) {\n    Statement stmt = connection.createStatement();\n    return stmt.executeQuery(\"SELECT * FROM merchants WHERE status = '\" + lookupKey + \"'\");\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-sql-concat"
+  },
+  {
+    "id": "TAINT-04",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup4(@RequestParam String searchTerm) {\n    Statement stmt = connection.createStatement();\n    return stmt.executeQuery(\"SELECT * FROM tickets WHERE owner_id = '\" + searchTerm + \"'\");\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-sql-concat"
+  },
+  {
+    "id": "TAINT-05",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup5(@RequestParam String customerId) {\n    Statement stmt = connection.createStatement();\n    return stmt.executeQuery(\"SELECT * FROM sessions WHERE reference = '\" + customerId + \"'\");\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-sql-concat"
+  },
+  {
+    "id": "TAINT-06",
+    "ruleType": "taint",
+    "snippet": "public String ping1(@RequestParam String host) throws IOException {\n    Process p = Runtime.getRuntime().exec(\"ping -c 1 \" + host);\n    return readOutput(p);\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-shell-concat"
+  },
+  {
+    "id": "TAINT-07",
+    "ruleType": "taint",
+    "snippet": "public String ping2(@RequestParam String hostname) throws IOException {\n    Process p = Runtime.getRuntime().exec(\"ping -c 1 \" + hostname);\n    return readOutput(p);\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-shell-concat"
+  },
+  {
+    "id": "TAINT-08",
+    "ruleType": "taint",
+    "snippet": "public String ping3(@RequestParam String node) throws IOException {\n    Process p = Runtime.getRuntime().exec(\"ping -c 1 \" + node);\n    return readOutput(p);\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-shell-concat"
+  },
+  {
+    "id": "TAINT-09",
+    "ruleType": "taint",
+    "snippet": "public String ping4(@RequestParam String target) throws IOException {\n    Process p = Runtime.getRuntime().exec(\"ping -c 1 \" + target);\n    return readOutput(p);\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-shell-concat"
+  },
+  {
+    "id": "TAINT-10",
+    "ruleType": "taint",
+    "snippet": "public String ping5(@RequestParam String address) throws IOException {\n    Process p = Runtime.getRuntime().exec(\"ping -c 1 \" + address);\n    return readOutput(p);\n}",
+    "expectedFlag": true,
+    "label": "vulnerable-shell-concat"
+  },
+  {
+    "id": "TAINT-11",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup1(@RequestParam String requestId) {\n    PreparedStatement stmt = connection.prepareStatement(\"SELECT * FROM accounts WHERE account_id = ?\");\n    stmt.setString(1, requestId);\n    return stmt.executeQuery();\n}",
+    "expectedFlag": false,
+    "label": "safe-prepared-statement"
+  },
+  {
+    "id": "TAINT-12",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup2(@RequestParam String accountRef) {\n    PreparedStatement stmt = connection.prepareStatement(\"SELECT * FROM invoices WHERE email = ?\");\n    stmt.setString(1, accountRef);\n    return stmt.executeQuery();\n}",
+    "expectedFlag": false,
+    "label": "safe-prepared-statement"
+  },
+  {
+    "id": "TAINT-13",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup3(@RequestParam String lookupKey) {\n    PreparedStatement stmt = connection.prepareStatement(\"SELECT * FROM merchants WHERE status = ?\");\n    stmt.setString(1, lookupKey);\n    return stmt.executeQuery();\n}",
+    "expectedFlag": false,
+    "label": "safe-prepared-statement"
+  },
+  {
+    "id": "TAINT-14",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup4(@RequestParam String searchTerm) {\n    PreparedStatement stmt = connection.prepareStatement(\"SELECT * FROM tickets WHERE owner_id = ?\");\n    stmt.setString(1, searchTerm);\n    return stmt.executeQuery();\n}",
+    "expectedFlag": false,
+    "label": "safe-prepared-statement"
+  },
+  {
+    "id": "TAINT-15",
+    "ruleType": "taint",
+    "snippet": "public List<Row> lookup5(@RequestParam String customerId) {\n    PreparedStatement stmt = connection.prepareStatement(\"SELECT * FROM sessions WHERE reference = ?\");\n    stmt.setString(1, customerId);\n    return stmt.executeQuery();\n}",
+    "expectedFlag": false,
+    "label": "safe-prepared-statement"
+  },
+  {
+    "id": "TAINT-16",
+    "ruleType": "taint",
+    "snippet": "public String ping1(@RequestParam String host) throws IOException {\n    ProcessBuilder pb = new ProcessBuilder(\"ping\", \"-c\", \"1\", \"localhost\");\n    Process proc = pb.start();\n    return readOutput(proc);\n}",
+    "expectedFlag": false,
+    "label": "safe-fixed-command"
+  },
+  {
+    "id": "TAINT-17",
+    "ruleType": "taint",
+    "snippet": "public String ping2(@RequestParam String hostname) throws IOException {\n    ProcessBuilder pb = new ProcessBuilder(\"ping\", \"-c\", \"1\", \"localhost\");\n    Process proc = pb.start();\n    return readOutput(proc);\n}",
+    "expectedFlag": false,
+    "label": "safe-fixed-command"
+  },
+  {
+    "id": "TAINT-18",
+    "ruleType": "taint",
+    "snippet": "public String ping3(@RequestParam String node) throws IOException {\n    ProcessBuilder pb = new ProcessBuilder(\"ping\", \"-c\", \"1\", \"localhost\");\n    Process proc = pb.start();\n    return readOutput(proc);\n}",
+    "expectedFlag": false,
+    "label": "safe-fixed-command"
+  },
+  {
+    "id": "TAINT-19",
+    "ruleType": "taint",
+    "snippet": "public String ping4(@RequestParam String target) throws IOException {\n    ProcessBuilder pb = new ProcessBuilder(\"ping\", \"-c\", \"1\", \"localhost\");\n    Process proc = pb.start();\n    return readOutput(proc);\n}",
+    "expectedFlag": false,
+    "label": "safe-fixed-command"
+  },
+  {
+    "id": "TAINT-20",
+    "ruleType": "taint",
+    "snippet": "public String ping5(@RequestParam String address) throws IOException {\n    ProcessBuilder pb = new ProcessBuilder(\"ping\", \"-c\", \"1\", \"localhost\");\n    Process proc = pb.start();\n    return readOutput(proc);\n}",
+    "expectedFlag": false,
+    "label": "safe-fixed-command"
+  },
+  {
+    "id": "AUTHZ-01",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint1Controller {\n    @GetMapping(\"/api/resource1\")\n    public ResponseEntity<Resource1> get1(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-02",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint2Controller {\n    @PostMapping(\"/api/resource2\")\n    public ResponseEntity<Resource2> get2(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-03",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint3Controller {\n    @PutMapping(\"/api/resource3\")\n    public ResponseEntity<Resource3> get3(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-04",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint4Controller {\n    @DeleteMapping(\"/api/resource4\")\n    public ResponseEntity<Resource4> get4(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-05",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint5Controller {\n    @GetMapping(\"/api/resource5\")\n    public ResponseEntity<Resource5> get5(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-06",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint6Controller {\n    @PostMapping(\"/api/resource6\")\n    public ResponseEntity<Resource6> get6(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-07",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint7Controller {\n    @PutMapping(\"/api/resource7\")\n    public ResponseEntity<Resource7> get7(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-08",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint8Controller {\n    @DeleteMapping(\"/api/resource8\")\n    public ResponseEntity<Resource8> get8(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-09",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint9Controller {\n    @GetMapping(\"/api/resource9\")\n    public ResponseEntity<Resource9> get9(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-10",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint10Controller {\n    @PostMapping(\"/api/resource10\")\n    public ResponseEntity<Resource10> get10(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": true,
+    "label": "missing-authorization"
+  },
+  {
+    "id": "AUTHZ-11",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint11Controller {\n    @PreAuthorize(\"hasRole('ADMIN')\")\n    @GetMapping(\"/api/resource11\")\n    public ResponseEntity<Resource11> get11(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-12",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint12Controller {\n    @PreAuthorize(\"hasRole('OPS')\")\n    @PostMapping(\"/api/resource12\")\n    public ResponseEntity<Resource12> get12(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-13",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint13Controller {\n    @PreAuthorize(\"hasRole('SUPPORT')\")\n    @PutMapping(\"/api/resource13\")\n    public ResponseEntity<Resource13> get13(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-14",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint14Controller {\n    @PreAuthorize(\"hasRole('BILLING')\")\n    @DeleteMapping(\"/api/resource14\")\n    public ResponseEntity<Resource14> get14(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-15",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint15Controller {\n    @PreAuthorize(\"hasRole('ADMIN')\")\n    @GetMapping(\"/api/resource15\")\n    public ResponseEntity<Resource15> get15(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-16",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint16Controller {\n    @PreAuthorize(\"hasRole('OPS')\")\n    @PostMapping(\"/api/resource16\")\n    public ResponseEntity<Resource16> get16(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-17",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint17Controller {\n    @PreAuthorize(\"hasRole('SUPPORT')\")\n    @PutMapping(\"/api/resource17\")\n    public ResponseEntity<Resource17> get17(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-18",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint18Controller {\n    @PreAuthorize(\"hasRole('BILLING')\")\n    @DeleteMapping(\"/api/resource18\")\n    public ResponseEntity<Resource18> get18(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-19",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint19Controller {\n    @PreAuthorize(\"hasRole('ADMIN')\")\n    @GetMapping(\"/api/resource19\")\n    public ResponseEntity<Resource19> get19(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "AUTHZ-20",
+    "ruleType": "authz",
+    "snippet": "@RestController\npublic class Endpoint20Controller {\n    @PreAuthorize(\"hasRole('OPS')\")\n    @PostMapping(\"/api/resource20\")\n    public ResponseEntity<Resource20> get20(@PathVariable String id) {\n        return ResponseEntity.ok(service.find(id));\n    }\n}",
+    "expectedFlag": false,
+    "label": "authorized-endpoint"
+  },
+  {
+    "id": "PROV-01",
+    "ruleType": "provenance",
+    "snippet": "spring-boot-starter-webx",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-02",
+    "ruleType": "provenance",
+    "snippet": "spring-boot-starter-securex",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-03",
+    "ruleType": "provenance",
+    "snippet": "jacksonutils-core",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-04",
+    "ruleType": "provenance",
+    "snippet": "commons-lang4",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-05",
+    "ruleType": "provenance",
+    "snippet": "guava-extra-collections",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-06",
+    "ruleType": "provenance",
+    "snippet": "lombok-plus",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-07",
+    "ruleType": "provenance",
+    "snippet": "junit-jupiter-fast",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-08",
+    "ruleType": "provenance",
+    "snippet": "mockito-core-lite",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-09",
+    "ruleType": "provenance",
+    "snippet": "slf4j-simple-fast",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-10",
+    "ruleType": "provenance",
+    "snippet": "h2-turbo",
+    "expectedFlag": true,
+    "label": "hallucinated-package"
+  },
+  {
+    "id": "PROV-11",
+    "ruleType": "provenance",
+    "snippet": "spring-boot-starter-web",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-12",
+    "ruleType": "provenance",
+    "snippet": "spring-boot-starter-data-jpa",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-13",
+    "ruleType": "provenance",
+    "snippet": "jackson-databind",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-14",
+    "ruleType": "provenance",
+    "snippet": "lombok",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-15",
+    "ruleType": "provenance",
+    "snippet": "junit-jupiter",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-16",
+    "ruleType": "provenance",
+    "snippet": "mockito-core",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-17",
+    "ruleType": "provenance",
+    "snippet": "guava",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-18",
+    "ruleType": "provenance",
+    "snippet": "commons-lang3",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-19",
+    "ruleType": "provenance",
+    "snippet": "slf4j-api",
+    "expectedFlag": false,
+    "label": "real-package"
+  },
+  {
+    "id": "PROV-20",
+    "ruleType": "provenance",
+    "snippet": "h2",
+    "expectedFlag": false,
+    "label": "real-package"
+  }
+]

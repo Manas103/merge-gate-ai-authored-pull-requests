@@ -1,4 +1,4 @@
-Default test run (`mvn test` from backend/), 688 tests, all passing.
+Default test run (`mvn test` from backend/), 699 tests, all passing.
 
 Tests run: 6, Failures: 0, Errors: 0, Skipped: 0 -- GateEngineTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- PitReportParserTest
@@ -7,8 +7,13 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0 -- MutationScoreGateTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0 -- RunbookCoverageCheckerTest
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 -- ReleaseGateApiIntegrationTest
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 103.1 s -- OrderingOracleReportTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 -- TaintAnalyzerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0 -- AuthorizationDiffCheckerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0 -- DependencyProvenanceCheckerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- SecurityGateCorpusTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0 -- SecurityHoldoutIntegrationTest
 ... plus 254 corpus PR-unit test classes (245 original + 9 seeded zero-kill units)
-Tests run: 688, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 699, Failures: 0, Errors: 0, Skipped: 0
 BUILD SUCCESS
 
 MergeGateApiIntegrationTest and ReleaseGateApiIntegrationTest boot the real Spring context
@@ -21,3 +26,11 @@ kinds are caught by the existing test alone, and the oracle never flags a correc
 Its 103s runtime is almost entirely the concurrent property check (8 threads x 50 ops, run once
 per patch, several of which deliberately sleep inside their critical section to make a race
 reproduce reliably); see docs/ordering_oracle_output.txt for the full per-patch report.
+
+TaintAnalyzerTest, AuthorizationDiffCheckerTest, DependencyProvenanceCheckerTest, and
+SecurityGateCorpusTest (new) exercise the three security rules added for this role: a
+single-hop taint tracer into SQL/shell sinks, a missing-authorization diff on new endpoints,
+and a dependency provenance check against a fixed registry. SecurityGateCorpusTest runs the
+full 60-case seeded security corpus (20 per rule, 10 deliberately vulnerable/hallucinated and
+10 deliberately safe/real each) through the real SecurityGate and asserts 0 false positives
+and 0 missed cases; see docs/security_gate_output.json for the per-case results.
